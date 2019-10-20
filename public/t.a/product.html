@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Testing</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="test.css" />
+
+    <script src="jquery.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.js"></script>
+  </head>
+
+  <body>
+    <!--Header Navbar-->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Icon</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+
+          <li class="nav-item dropdown active">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Dropdown link
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="storeSomi.html">Sơ mi </a>
+              <a class="dropdown-item" href="storeSuit.html">Suit</a>
+              <a class="dropdown-item" href="storeDomi.html">Vest</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+      </div>
+      <!-- User -->
+      <a href="#account" title="Tài Khoản">
+        <i class="fas fa-user fa-lg ml-3 mr-3" style="color:white"></i>
+      </a>
+
+      <a href="#cart" title="Giỏ đồ">
+        <i class="fas fa-shopping-cart fa-lg ml-3 mr-3" style="color:white"></i>
+      </a>
+    </nav>
+    <!--Main body-->
+    <div class="container-fluid">
+      <!--Row-->
+      <div class="row">
+        <!--Column-->
+        <div class="col-lg-6 order-lg-2">
+          <div class="pt-5">
+            <img
+              class="img-fluid float-right"
+              src="images/somi1.jpg"
+              height="300px"
+              width="300px"
+            />
+          </div>
+        </div>
+
+        <div class="col-lg-6 order-lg-2">
+          <div class="pt-5" style="margin-right:200px; margin-top:50px;">
+            <h4>Sơ mi xanh berin</h4>
+            <p><span class="text-muted">Giá :</span>1.500.000 đ</p>
+            <hr
+              class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 80%;"
+            />
+            <p>
+              <span class="text-muted">Mô tả:</span><br />
+              Vải cotton mềm mại và thoải mái. Màu xanh berin cho phong cách trẻ
+              trung, nổi bật. Thiết kế phối vải trong cổ áo và tay áo.
+            </p>
+            <hr
+              class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 80%;"
+            />
+
+            <p>
+              <spam class="text-muted">Màu sắc :</spam><br />
+              Xanh
+            </p>
+            <p>
+              <spam class="text-muted">Bộ sưu tập :</spam><br />
+              Xuân hạ
+            </p>
+
+            <select class="mt-3" style="width: 200px; height: 25px;">
+              <option value="cz">Chọn size</option>
+              <option value="cz50">50</option>
+              <option value="cz51">51</option>
+              <option value="cz52">52</option>
+              <option value="cz53">53</option>
+              <option value="cz54">54</option>
+              <option value="cz55">55</option>
+              <option value="cz56">56</option>
+              <option value="cz57">57</option>
+              <option value="cz58">58</option>
+              <option value="cz59">59</option>
+              <option value="cz60">60</option>
+              <option value="cz61">61</option>
+              <option value="cz62">62</option>
+              <option value="cz63">63</option>
+              <option value="cz64">64</option>
+            </select>
+
+            <select
+              class="mt-3"
+              style="width: 200px; height: 25px; margin-left:25px;"
+            >
+              <option value="ck">Chọn Khác</option>
+              <option value="ck39">39</option>
+              <option value="ck40">40</option>
+              <option value="ck41">41</option>
+              <option value="ck42">42</option>
+              <option value="ck43">43</option>
+              <option value="L">L</option>
+              <option value="M">M</option>
+              <option value="ML">XL</option>
+              <option value="XS">XS</option>
+            </select>
+
+            <hr
+              class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 80%; color:black;"
+            />
+
+            <button type="button" class="btn btn-dark">Add to card</button>
+          </div>
+        </div>
+      </div>
+      <!--Columns-->
+    </div>
+
+    <!--Footer-->
+    <footer class="page-footer font-small pt-4">
+      <div class="container-fluid text-md-left mt-5 ">
+        <!--Gmail address-->
+        <div class="row bg-secondary">
+          <!--Col1 H5 P-->
+          <div class="col-md-6 mt-3" style="margin-left:13%;">
+            <h5 class="text-uppercase font-weight-bold">
+              Cập nhật tin tức mới nhất :
+            </h5>
+            <p>Đăng ký để nhận được tin tức mới nhất về shop</p>
+          </div>
+          <!--Grid column-->
+          <div class="col-md-6 mt-4" style="margin-left:-13% ">
+            <form class="input-group">
+              <input
+                type="text"
+                class="form-control form-control-sm"
+                placeholder="Your email"
+                aria-label="Your email"
+                aria-describedby="basic-addon2"
+              />
+              <div class="input-group-append">
+                <button class="btn btn-sm btn-outline-dark my-0" type="button">
+                  Sign up
+                </button>
+              </div>
+            </form>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid Row-->
+        <div class="row mt-3">
+          <!--Grid Columns-->
+          <div class="col-md-6 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!--Content-->
+            <h6 class="font-weight-bold">Address</h6>
+            <hr
+              class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px;"
+            />
+            <p>Cơ sở 1 : Bắc Từ Liêm</p>
+          </div>
+          <!--Grid Columns-->
+
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase font-weight-bold">Contact</h6>
+            <hr
+              class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto"
+              style="width: 60px;"
+            />
+            <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
+            <p><i class="fas fa-phone mr-3"></i> + 11 223 35 58</p>
+            <p><i class="fas fa-print mr-3"></i> + 11 223 35 58</p>
+          </div>
+        </div>
+
+        <!-- Grid column -->
+        <div class="row">
+          <div class="text-center  w-100">
+            <a href=""
+              ><i
+                class="fab fa-facebook-f fa-lg mb-3 mr-3 mt-3"
+                style="color: black;"
+              ></i
+            ></a>
+            <a href=""
+              ><i
+                class="fab fa-twitter fa-lg mb-3 mr-3 mt-3"
+                style="color: black;"
+              ></i
+            ></a>
+            <a href=""
+              ><i
+                class="fab fa-instagram fa-lg mb-3 mr-3 mt-3"
+                style="color: black;"
+              ></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

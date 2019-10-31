@@ -129,7 +129,7 @@ div{
     /*
     border: 1px solid black;
     */
-    
+
     text-align: center;
 }
 .logo-middle .logo{
@@ -648,7 +648,7 @@ div{
     background-image: url(/resources/img/banner3.jpg);
     width: 50%;
     color: white;
-    
+
 }
 .second-banner a{
     text-decoration: none;
@@ -722,7 +722,7 @@ div{
 .service-section p{
     text-align: center;
     margin-right: 30px;
-    
+
 }
 
 /* ------------------------------------------------------------------------------*/
@@ -739,7 +739,7 @@ div{
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
-    
+
 }
 .feedback-section .feedback-header h2{
     letter-spacing: 1.5px;
@@ -760,7 +760,7 @@ div{
     width: 320px;
 }
 .feedback-section .instagram-section .instagram-img .layer1{
-    width: 100%; 
+    width: 100%;
     transition: 0.4s;
 }
 .feedback-section .instagram-section .instagram-img .white{

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -26,7 +26,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="denim.html">
+                            <a href={{route('product_type','denim')}}>
                                 <p>DENIM</p>
                                 <img src="/img/denim-menu.png" alt="">
                             </a>
@@ -366,3 +366,4 @@
 </body>
 
 </html>
+

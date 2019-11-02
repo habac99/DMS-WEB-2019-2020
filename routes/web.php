@@ -17,6 +17,15 @@
 Route::get('/', function (){
     return view('homepage');
 });
+Route::get('/product_type/{type_name}',[
+    'as'=> 'product_type',
+    'uses' => 'CustomerController@product_type'
+]);
+
+Route::get('/product/{product_name}',[
+    'as'=>'one_product',
+    'uses'=> 'CustomerController@one_product'
+]);
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

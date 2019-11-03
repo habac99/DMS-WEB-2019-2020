@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/product.css">
-    <title>Denim</title>
+    <title> {{strtoupper($type_name)}}</title>
 </head>
 
 <body>
@@ -100,7 +100,7 @@ Let's add a thing or two.
 
     <div class="product-header">
         <div class="header-text">
-            {{$type_name}}
+            {{strtoupper($type_name)}}
         </div>
     </div>
     <div class="product-section">
@@ -119,7 +119,7 @@ Let's add a thing or two.
                             36 37 38 39 40</div>
                     </div>
                     <div class="btn-shop-now">
-                        <a href="#">SHOP NOW</a>
+                        <a href="{{route('one_product',$pr_list->product_name)}}">SHOP NOW</a>
                     </div>
                 </div>
                 <div class="title-img">

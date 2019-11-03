@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\DB;
 class CustomerController extends Controller
 {
     //
+    public function homepage(){
+        return view('homepage');
+
+    }
     public function product_type (Request $req){
         $query = DB::table('product_types')->where('type_name', $req->type_name)->get();
         $id = $query[0]->type_id;
@@ -22,9 +26,15 @@ class CustomerController extends Controller
 
 
     }
-    public function one_product( $product_id ){
+    public function one_product( Request $req ){
+        echo $req->product_name;
+        $name = $req->product_name;
+        $query = DB::table('products')->where('product_name',$req->product_name)->get();
+        $id = $query[0]->product_id;
+        $details = DB::table('product_details')->where('product_id', $id)->get();
 
-        return view('customer.one_product');
+
+        return view('customer.one_product', compact('name','details'));
 
     }
 

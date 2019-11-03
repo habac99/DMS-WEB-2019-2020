@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Home</title>
 </head>
 
@@ -32,7 +32,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/vendors/oneproduct/cargos.html">
+                            <a href={{route('product_type','cargos')}}>
                                 <p>CARGOS</p>
                                 <img src="/img/cargo-menu.png" alt="">
                             </a>

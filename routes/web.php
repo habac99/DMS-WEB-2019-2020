@@ -14,9 +14,10 @@
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-Route::get('/', function (){
-    return view('homepage');
-});
+Route::get('/',[
+    'as'=>'Homepage',
+    'uses'=>'CustomerController@homepage'
+]);
 Route::get('/product_type/{type_name}',[
     'as'=> 'product_type',
     'uses' => 'CustomerController@product_type'

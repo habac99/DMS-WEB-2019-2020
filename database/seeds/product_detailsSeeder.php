@@ -15,11 +15,16 @@ class product_detailsSeeder extends Seeder
         //
        $data = [
            [
-               'product_id'=>1,
+               'product_id'=>2,
                'color'=>'black',
                'instock'=>50,
                'sold'=>100,
-               'image'=>'img/allproduct/denim/m1-denim-black-1.jpg, img/allproduct/denim/m1-denim-black-2.jpg, img/allproduct/denim/m1-denim-black-3.jpg, img/allproduct/denim/m1-denim-black-4.jpg, img/allproduct/denim/m1-denim-black-5.jpg',
+               'image1'=>'/img/allproduct/denim/stretch-denim-1.jpg',
+               'image2'=>'/img/allproduct/denim/stretch-denim-2.jpg',
+               'image3'=>'/img/allproduct/denim/stretch-denim-3.jpg',
+               'image4'=>'/img/allproduct/denim/stretch-denim-4.jpg',
+               'image5'=>'/img/allproduct/denim/stretch-denim-5.jpg',
+
 //               'created_at' => Carbon::now()->format('d-m-y H:i:s','Asia/Ho_Chi_Minh'),
 //               'updated_at' => Carbon::now()->format('d-m-y H:i:s','Asia/Ho_Chi_Minh')
 

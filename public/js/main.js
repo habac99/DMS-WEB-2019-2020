@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded",function(){
 
     var button = document.getElementById('tle'),
         drop = document.getElementById('drop-down');
-    console.log(button);
+   // console.log(button);
     button.onclick = function(){
         drop.classList.toggle('show');
     }
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded",function(){
         button = document.querySelector('.cart');
         overflow = document.querySelector('body');
         close = document.querySelector('.close');
-    
+
     button.onclick = function(){
         black.classList.add('show');
         cart.classList.add('move-to-left');
@@ -66,3 +66,20 @@ function myFunction(imgs) {
     expandImg.src = imgs.src;
     expandImg.parentElement.style.display = "block";
 }
+
+    var buttonAdd = document.getElementById("buttonAdd");
+    var p_name = document.getElementById("testid");
+    var p_color=document.getElementById("colorid");
+    var p_price=document.getElementById("priceid");
+
+    //console.log(buttonAdd.innerHTML);
+
+
+
+
+
+
+
+
+
+

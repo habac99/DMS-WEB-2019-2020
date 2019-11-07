@@ -8,4 +8,5 @@ class product_model extends Model
 {
     //
     protected $table = 'products';
+    protected $primaryKey='product_id';
 }

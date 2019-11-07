@@ -14,24 +14,16 @@ class Product_typeSeeder extends Seeder
     {
         $data =[
             [
-                'type_name'=>'denim',
+                'type_name'=>'outerwear',
                 'description'=>'this is description',
-                'image'=>'/img/denim-menu.png',
+                'image'=>'/img/outerwear-menu.png',
                 'created_at' => Carbon::now()->format('d-m-y H:i:s'),
                 'updated_at' => Carbon::now()->format('d-m-y H:i:s')
             ],
             [
-                'type_name'=>'cargos',
+                'type_name'=>'top',
                 'description'=>'this is description',
-                'image'=>'//img/cargo-menu.png',
-                'created_at' => Carbon::now()->format('d-m-y H:i:s'),
-                'updated_at' => Carbon::now()->format('d-m-y H:i:s')
-
-            ],
-            [
-                'type_name'=>'shorts',
-                'description'=>'this is description',
-                'image'=>'/img/shprts-menu.png',
+                'image'=>'/img/top-menu.png',
                 'created_at' => Carbon::now()->format('d-m-y H:i:s'),
                 'updated_at' => Carbon::now()->format('d-m-y H:i:s')
 

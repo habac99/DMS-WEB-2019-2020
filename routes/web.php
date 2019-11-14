@@ -27,15 +27,30 @@ Route::get('/Allproducts',[
     'uses'=>'CustomerController@all_product'
 ]);
 
-Route::get('/product/{product_name}',[
-    'as'=>'one_product',
-    'uses'=> 'CustomerController@one_product'
-]);
-Route::group(['prefix'=>'memberLogin'],function (){
-    Route::get('/', 'CustomerController@getLogin');
+
+route::get('/product/{product_name}/{color?}', 'CustomerController@product_color')->name('one_product');
+//    route::get(','CustomerController@product_color')->name('pr_color');
+//}
+
+
+Route::group(['prefix'=>'Signin','middleware'=>'checkLogin'],function (){
+    Route::get('/', 'CustomerController@getLogin')->name('mLogin');
     Route::post('/','CustomerController@postLogin');
 });
-Route::get('/admin', 'AdminController@adminLogin');
-Auth::routes();
+Route::group(['prefix'=>"signup",'middleware'=>'checkLogin'],function (){
+    route::get('/','CustomerController@getSignup')->name('sign up');
+    route::post('/','CustomerController@postSignup');
+});
+Route::group(['prefix'=>'Admin','middleware'=>'checkLogout'],function (){
+    Route::get('/','AdminController@adminHome')->name('adminHome');
+
+});
+Route::get('/logout','CustomerController@getLogout')->name('logout');
+
+//Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home');

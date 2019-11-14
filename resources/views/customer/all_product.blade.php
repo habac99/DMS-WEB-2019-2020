@@ -1,4 +1,5 @@
 @extends('master')
+<link rel="stylesheet" href="/css/bootstrap.min.css">
 @section('title')
     All Products
 @endsection
@@ -11,7 +12,7 @@
 <div class="product-section">
     <div class="product">
         @foreach($all_products as $each_pr)
-        <div class="img-bestseller-product">
+        <div class="img-bestseller-product" id="{{$each_pr->product_id}}">
             <div class="image-block">
                 <a href={{route('one_product',$each_pr->product_name)}}><img src={{$each_pr->image}} alt="" class="layer1"></a>
                 <div class="white"></div>
@@ -34,6 +35,7 @@
             @endforeach
     </div>
 </div>
+{{--    {{$all_products->links()}}--}}
 @endsection
 
 

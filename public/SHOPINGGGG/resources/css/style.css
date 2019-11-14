@@ -259,7 +259,7 @@ div{
 /*--------------------------------main banner content----------------------------*/
 /* ------------------------------------------------------------------------------*/
 .first-banner{
-    background-image:url(/resources/img/banner1.jpg);
+    background-image:url(/public/img/banner1.jpg);
     background-size: cover;
     background-position: center;
     height: 704px;
@@ -640,12 +640,12 @@ div{
     text-align: center;
 }
 .second-banner .left-banner{
-    background-image: url(/resources/img/banner2.jpg);
+    background-image: url(/public/img/banner2.jpg);
     width: 50%;
     color: white;
 }
 .second-banner .right-banner{
-    background-image: url(/resources/img/banner3.jpg);
+    background-image: url(/public/img/banner3.jpg);
     width: 50%;
     color: white;
 

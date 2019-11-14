@@ -201,7 +201,7 @@ div{
 }
 .side-cart .content-cart .main-content{
     display: flex;
-    align-items: center;
+    /*align-items: center;*/
     justify-content: center;
     margin-left: 20px;
     margin-right: 20px;
@@ -331,10 +331,10 @@ div{
 
 }
 .new-product .img-new-product{
-    width: 390px;
+    width: 300px;
 }
 .new-product .img-new-product img{
-    width: 390px;
+    width: 300px;
     margin-bottom: 7px;
     transition: 0.4s;
 }
@@ -914,4 +914,20 @@ div{
 }
 .contac-section .contact-banner .right-contact .input-section .btn-submit:hover{
     background-color: rgb(139, 133, 133);
+}
+.user-menu {
+    display: inline-block;
+    margin-top: 14px;
+    margin-right: 10px;
+    float: right;
+    list-style: none;
+    padding: 0;
+}
+
+.user-menu a {
+    color: #fff;
+}
+
+.user-menu a:hover, .user-menu a:focus {
+    text-decoration: none;
 }

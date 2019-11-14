@@ -15,7 +15,7 @@
                             <li>
                                 <a href={{route('product_type',$pr_type->type_name)}}>
                                     <p>{{$pr_type->type_name}}</p>
-                                    <img src={{$pr_type->image}} alt="">
+                                    <img src="{{ $pr_type->image }}" alt="">
                                 </a>
                             </li>
                         @endforeach
@@ -27,10 +27,22 @@
         <div class="logo-middle">
             <a href={{route('Homepage')}} class="logo">s l m p l e</a>
         </div>
+
+
+
+
         <div class="right-menu">
-            <div><a href="/dangnhap.html">My Account</a></div>
-            <div class="fas fa-shopping-cart cart"></div>
+            @if(Auth::check() )
+                <div><a href="">{{Auth::User()->first_name}}</a></div>
+                <div class="fas fa-shopping-cart cart"></div>
+                <div><a href={{route('logout')}}>Log Out</a> </div>
+            @else
+                <div><a href={{route('mLogin')}}>My account</a></div>
+                <div class="fas fa-shopping-cart cart"></div>
+
+            @endif
         </div>
+
     </div>
     <div class="side-cart">
         <div class="black-screen"></div>
@@ -39,14 +51,13 @@
                 <p>BAG</p>
                 <p class="close">CLOSE</p>
             </div>
-            <div class="main-content">
+            <div class="main-content" id="cart_info">
 
 
-                <p>
-                    Looks like your bag is empty.
-                    <br>
-                    Let's add a thing or two.
-                </p>
+
+
+
+
             </div>
             <div class="check-out">
                 <div class="content-check-out">

@@ -22,7 +22,7 @@
 }
 .dangky-section .dangky-form .text{
     /* color: rgb(163, 163, 163); */
-    font-size: 18;
+    font-size: 18px;
     color: rgb(66, 66, 66);
 }
 .dangky-section .dangky-form input{
@@ -174,4 +174,8 @@
 }
 .contac-section .contact-banner .right-contact .input-section .btn-submit:hover{
     background-color: rgb(139, 133, 133);
+}
+.alert.alert-danger.p-alert{
+    color: red;
+    font-size: 14px;
 }

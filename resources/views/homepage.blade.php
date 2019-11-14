@@ -17,38 +17,16 @@
         <h4>WHATS NEW</h4>
     </div>
     <div class="new-product">
+        @foreach($new_product as $new_pr)
         <div class="img-new-product">
-            <a href="/vendors/oneproduct/wovenflannel.html"><img src="/img/whatnew1.jpg" alt=""></a>
-            <p>LOOKBOOK 2077</p>
-            <div class="title-img">
-                <a href="/vendors/oneproduct/wovenflannel.html">WOVEN FLANNEL</a>
-            </div>
-            <a href="/vendors/oneproduct/wovenflannel.html" class="new-product-btn">SHOP NOW</a>
-        </div>
-        <div class="img-new-product">
-            <a href="/vendors/oneproduct/snappants.html"><img src="/img/whatnew2.jpg" alt=""></a>
-            <p>LOOKBOOK 2077</p>
-            <div class="title-img">
-                <a href="/vendors/oneproduct/snappants.html">SNAP PANTS</a>
-            </div>
-            <a href="/vendors/oneproduct/snappants.html" class="new-product-btn">SHOP NOW</a>
-        </div>
-        <div class="img-new-product">
-            <a href="/vendors/oneproduct/outerwear.html"><img src="/img/whatnew3.jpg" alt=""></a>
+            <a href={{route('one_product',$new_pr->product_name)}}><img src={{$new_pr->image}} alt=""></a>
             <p>NEW RELEASE</p>
             <div class="title-img">
-                <a href="/vendors/oneproduct/outerwear.html">OUTERWEAR</a>
+                <a href={{route('one_product',$new_pr->product_name)}}>{{$new_pr->product_name}}</a>
             </div>
-            <a href="/vendors/oneproduct/outerwear.html" class="new-product-btn">SHOP NOW</a>
+            <a href={{route('one_product',$new_pr->product_name)}} class="new-product-btn">SHOP NOW</a>
         </div>
-        <div class="img-new-product">
-            <a href="/vendors/oneproduct/xidenim.html"><img src="/img/whatnew4.jpg" alt=""></a>
-            <p>NEW RELEASE</p>
-            <div class="title-img">
-                <a href="/vendors/oneproduct/xidenim.html">X DENIM</a>
-            </div>
-            <a href="/vendors/oneproduct/xidenim.html" class="new-product-btn">SHOP NOW</a>
-        </div>
+            @endforeach
     </div>
 </div>
 
@@ -153,32 +131,61 @@
 <div class="second-banner">
     <div class="left-banner">
         <h2>DENIM</h2>
-        <a href="vendors/oneproduct/denim.html" class="text-btn2">SHOP NOW</a>
+        <a href={{route('product_type','denim')}} class="text-btn2">SHOP NOW</a>
     </div>
     <div class="right-banner">
         <h2>BOTTOM</h2>
-        <a href="vendors/oneproduct/bottom.html" class="text-btn2">SHOP NOW</a>
+        <a href={{route('product_type','bottom')}} class="text-btn2">SHOP NOW</a>
     </div>
 </div>
-{{--<div class="service-section">--}}
-{{--    <div class="service-header">--}}
-{{--        <h4>SERVICE</h4>--}}
-{{--    </div>--}}
-{{--    <div class="service-content">--}}
-{{--        <div class="service">--}}
-{{--            <i class="fas fa-paper-plane"></i>--}}
-{{--            <p>FREE SHIPPING ON ALL ORDERS OVER $100 USD</p>--}}
-{{--        </div>--}}
-{{--        <div class="service">--}}
-{{--            <i class="fas fa-dollar-sign"></i>--}}
-{{--            <p>FREE RETURNS</p>--}}
-{{--        </div>--}}
-{{--        <div class="service">--}}
-{{--            <i class="fas fa-shield-alt"></i>--}}
-{{--            <p>SECURE CHECKOUT</p>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</div>--}}
+<div class="feedback-section">
+    <div class="feedback-header">
+        <h2>INSTAGRAM LOOK</h2>
+    </div>
+    <div class="instagram-section">
+        <div class="instagram-img">
+            <a href="#"><img src="/img/i1.jpg" alt="" class="layer1"></a>
+            <div class="white"></div>
+            <div class="logo-instagram">
+                <a href="https://www.instagram.com/p/BxA8ZT6Jo02/"><i class="fab fa-instagram"></i></a>
+                <div class="title">SEE THIS LOOK</div>
+            </div>
+        </div>
+        <div class="instagram-img">
+            <a href="#"><img src="/img/i2.jpg" alt="" class="layer1"></a>
+            <div class="white"></div>
+            <div class="logo-instagram">
+                <a href="https://www.instagram.com/p/B3pQ_vwDgvY/"><i class="fab fa-instagram"></i></a>
+                <div class="title">SEE THIS LOOK</div>
+            </div>
+        </div>
+        <div class="instagram-img">
+            <a href="#"><img src="/img/i3.jpg" alt="" class="layer1"></a>
+            <div class="white"></div>
+            <div class="logo-instagram">
+                <a href="https://www.instagram.com/p/B3mjXOFglXr/"><i class="fab fa-instagram"></i></a>
+                <div class="title">SEE THIS LOOK</div>
+            </div>
+        </div>
+        <div class="instagram-img">
+            <a href="#"><img src="/img/i4.jpg" alt="" class="layer1"></a>
+            <div class="white"></div>
+            <div class="logo-instagram">
+                <a href="https://www.instagram.com/p/B30AkczpX8P/"><i class="fab fa-instagram"></i></a>
+                <div class="title">SEE THIS LOOK</div>
+            </div>
+        </div>
+        <div class="instagram-img">
+            <a href="#"><img src="/img/i5.jpg" alt="" class="layer1"></a>
+            <div class="white"></div>
+            <div class="logo-instagram">
+                <a href="https://www.instagram.com/p/B3zZk3-A35m/"><i class="fab fa-instagram"></i></a>
+                <div class="title">SEE THIS LOOK</div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 

@@ -5,11 +5,29 @@
 @endsection
 @section('content')
 
+{{--    <script>--}}
+{{--        var xhttp =  new XMLHttpRequest();--}}
+{{--        xhttp.open("get","details.json",true);--}}
+{{--        xhttp.send();--}}
+{{--        var blue = document.getElementById('bluebtn');--}}
+{{--        var img1 = document.getElementById('img1');--}}
+{{--        var details = JSON.parse(this.responseText);--}}
+{{--        //--}}
+{{--        function ChangeColor(color) {--}}
+
+{{--            for (var i = 0; i < details.length(); i++) {--}}
+{{--                if (details.color === color) {--}}
+{{--                    img1.scr = "/img/allproduct/denim/m1-denim-blue-1.jpg";--}}
+
+{{--                }--}}
+{{--            }--}}
+{{--        }--}}
+{{--    </script>--}}
     <div class="show-container">
-    <div class="show-section">
-        <div class="img-button">
+    <div class="show-section"id = {{$details[0]->product_id}}>
+        <div class="img-button" >
             <div class="row-button">
-                <img src={{$details[0]->image1}} alt="" onclick="myFunction(this);" class="get">
+                <img id="img1" src={{$details[0]->image1}} alt="" onclick="myFunction(this);" class="get">
                 <div class="white-layer"></div>
             </div>
             <div class="row-button">
@@ -74,8 +92,14 @@
                     <label for="XXXL" class="four-size">XXXL</label>
                     <div class="check"></div>
                 </div>
+
+{{--                    <a href="{{route('pr_color','blue')}}">blue</a>--}}
+                    <a href= {{route('one_product',[$name,'blue'])}}>blue</a>
+{{--                <button id = "bluebtn" type="button" onclick="ChangeColor()">blue</button>--}}
+
+
             </div>
-            <button id="buttonAdd"  type="button">ADD TO BAG</button>
+            <button id="buttonAdd"  type="button" onclick="addtocart()">ADD TO BAG</button>
             <div class="information">
                 <p class="des">
                     the Cargo Drawcord Shorts are designed with a relaxed fit throughout, cargo pockets at the side seam and front, which extend past the length of the shorts, a stretch waistband, and is finished with a yellow elastic drawcord with metal aglets.
@@ -92,3 +116,4 @@
         </div>
     </div>
 </div>
+    @endsection

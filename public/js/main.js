@@ -66,11 +66,33 @@ function myFunction(imgs) {
     expandImg.src = imgs.src;
     expandImg.parentElement.style.display = "block";
 }
-
+function addtocart() {
     var buttonAdd = document.getElementById("buttonAdd");
-    var p_name = document.getElementById("testid");
-    var p_color=document.getElementById("colorid");
-    var p_price=document.getElementById("priceid");
+    var p_name = document.getElementById("nameid");
+    var p_color = document.getElementById("colorid");
+    var p_price = document.getElementById("priceid");
+    var cart = document.getElementById("cart_info");
+  //  var info = cart.getElementsByTagName("p");
+    // var now = info.innerText;
+    buttonAdd.onclick = function () {
+        var name = document.createElement('p');
+        name.innerHTML = p_name.innerHTML;
+        cart.appendChild(name);
+        console.log(name);
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
     //console.log(buttonAdd.innerHTML);
 

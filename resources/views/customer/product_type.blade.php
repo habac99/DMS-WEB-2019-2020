@@ -5,6 +5,7 @@
 @section('title')
     {{strtoupper($type_name)}}
 @endsection
+<link rel="stylesheet" href="/css/bootstrap.min.css">
 @section('content')
     <div class="product-header">
         <div class="header-text">
@@ -27,8 +28,9 @@
                             36 37 38 39 40</div>
                     </div>
                     <div class="btn-shop-now">
-                        <a href="{{route('one_product',$pr_list->product_name)}}">SHOP NOW</a>
+                        <a href="{{route('one_product',[$pr_list->product_name,'black'])}}">SHOP NOW</a>
                     </div>
+
                 </div>
                 <div class="title-img">
                     <a href="#">{{$pr_list->product_name}}</a>
@@ -39,7 +41,7 @@
                 <div class="information">BLACK</div>
             </div>
             @endforeach
-
+                {{$product_list->links()}}
         </div>
     </div>
 @endsection

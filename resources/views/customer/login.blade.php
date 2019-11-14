@@ -1,110 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('master')
+@section('title')
+    Account Login
+@endsection
+@section('content')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/dangnhap.css">
-    <title>Sign In</title>
-</head>
+<form role="form" method='post' class="dangky-section">
 
-<body>
-<div class="header-menu" id="nav-menu">
-    <div class="main-menu">
-        <div class="left-menu">
-            <div class="menu-layer1">
-                <button id="tle" class="dropbtn">Shop</button>
-                <div class="menu-layer2" id="drop-down">
-                    <ul>
-                        <li>
-                            <a href="/product.html">
-                                <p>ALL PRODUCT</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/vendors/oneproduct/denim.html">
-                                <p>DENIM</p>
-                                <img src="/resources/img/denim-menu.png" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/vendors/oneproduct/cargos.html">
-                                <p>CARGOS</p>
-                                <img src="/resources/img/cargo-menu.png" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/vendors/oneproduct/shorts.html">
-                                <p>SHORTS</p>
-                                <img src="/resources/img/short-menu.png" alt="">
-                            </a>
-
-                        </li>
-                        <li>
-                            <a href="/vendors/oneproduct/outerwear.html">
-                                <p>OUTERWEAR</p>
-                                <img src="/resources/img/outerwear-menu.png" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/vendors/oneproduct/top.html">
-                                <p>TOP</p>
-                                <img src="/resources/img/top-menu.png" alt="">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!-- <a href="#">About</a> -->
-        </div>
-        <div class="logo-middle">
-            <a href="index.html" class="logo">s l m p l e</a>
-        </div>
-        <div class="right-menu">
-            <div><a href="dangnhap.html">My Account</a></div>
-            <div class="fas fa-shopping-cart cart"></div>
-        </div>
-    </div>
-    <div class="side-cart">
-        <div class="black-screen"></div>
-        <div class="content-cart">
-            <div class="content">
-                <p>BAG</p>
-                <p class="close">CLOSE</p>
-            </div>
-            <div class="main-content">
-                <p>
-                    Looks like your bag is empty.
-                    <br>
-                    Let's add a thing or two.
-                </p>
-            </div>
-            <div class="check-out">
-                <div class="content-check-out">
-                    <div class="sumtotal-money">
-                        <p>SUMTOTAL(0 item)</p>
-                        <p class="money">0$</p>
-                    </div>
-                    <a href="#">CHECK OUT</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="dangky-section">
-    <form role="form" method='post'>
-        <fieldset>
+{{--        <fieldset>--}}
         <div class="dangky-form">
             <p>ACCOUNT - SIGN IN</p>
+            @if(Session::has('error'))
+                <p class="alert alert-danger p-alert">{{Session::get('error')}}</p>
+            @endif
             <div class="text">Email Address</div>
-            <input required type="email" name="email" class="email">
+            <input required type="email" name="email" value="{{old('email')}}" class="email">
             <div class="text">Password</div>
             <input type="password" name="password" class="_password">
             <a href="#">I forgot my password</a>
@@ -113,56 +22,13 @@
            </a>
             <div class="account-alr">
                 <span>Don't have an account?</span>
-                <a href="dangky.html">Sign up</a>
+                <a href={{route('sign up')}}>Sign up</a>
             </div>
         </div>
-        </fieldset>
+{{--        </fieldset>--}}
         {{csrf_field()}}
-    </form>
+</form>
 
-</div>
 
-<div class="contac-section">
-    <div class="logo-middle1">s l m p l e</div>
-    <div class="contact-banner">
-        <div class="left-contact">
-            <div class="address">
-                <div>
-                    <i class="fas fa-map-marker-alt haha"></i>
-                    <p>Address: 64 Tran Quoc Vuong, Cau Giay, Ha Noi</p>
-                </div>
-                <div>
-                    <i class="fas fa-envelope"></i>
-                    <p>Email: contactme@gmail.com</p>
-                </div>
-                <div>
-                    <i class="fas fa-phone"></i>
-                    <p>Phone: (+84)017-2710-0199</p>
-                </div>
-            </div>
-        </div>
-        <div class="middle-contact">
-            <div class="grid">
-                <i class="fab fa-facebook-square"></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-twitter-square"></i>
-                <i class="fab fa-google-plus-square"></i>
-            </div>
-        </div>
-        <div class="right-contact">
-            <div class="text">BE FIRST TO KNOW ABOUT RELEASES AND RESTOCKS
-            </div>
-            <div class="input-section">
-                <input type="email" class="email" placeholder="Email Address">
-                <button class="btn-submit" type="submit" name="subcribe">
-                    SEND
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
+    @endsection
 
-<script src="/js/main.js"></script>
-</body>
-
-</html>

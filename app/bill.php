@@ -12,8 +12,11 @@ class bill extends Model
     //
     protected $table ='bills';
     protected $primaryKey = 'bill_id';
-    public function product(){
-        return $this->hasMany(bill_detail::class);
+    public function bill_detail(){
+        return $this->hasMany('App\bill_details','bill_id','bill_id');
+    }
+    public function bill(){
+        return $this->belongsTo('App\customer','customer_id','customer_id');
     }
 
 

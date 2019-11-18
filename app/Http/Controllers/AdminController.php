@@ -13,13 +13,29 @@ class AdminController extends Controller
     }
     public function adminHome(){
         if(Auth::user()->level==1){
-            return view('admin.adminHome');
+            return view('admin.Home');
         }
         else{
             return redirect()->intended('/');
 
         }
 
+
+    }
+    public function all_product(){
+        return view('admin.products');
+    }
+
+    public function getAddProduct(){
+
+    }
+    public function postAddproduct(){
+
+    }
+    public function addProduct(){
+
+    }
+    public function addDetail(){
 
     }
 }

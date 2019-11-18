@@ -11,7 +11,7 @@ class product extends Model
     protected $primaryKey='product_id';
 
     public function bill(){
-        return $this->hasMany(bill::class);
+        return $this->hasMany('App\bill');
     }
 
     public function product_type(){

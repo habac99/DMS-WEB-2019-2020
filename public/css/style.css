@@ -259,7 +259,7 @@ div{
 /*--------------------------------main banner content----------------------------*/
 /* ------------------------------------------------------------------------------*/
 .first-banner{
-    background-image:url(/img/banner1.jpg);
+    background-image:url(/storage/img/banner1.jpg);
     background-size: cover;
     background-position: center;
     height: 704px;
@@ -483,7 +483,7 @@ div{
     width: 390px;
 }
 .bestseller-product .img-bestseller-product img{
-    width: 390px;
+    width: 370px;
     margin-bottom: 7px;
 }
 .bestseller-product .img-bestseller-product .title-img{
@@ -498,7 +498,7 @@ div{
 .bestseller-product .img-bestseller-product .title-img .cost{
     position: absolute;
     height: 100%;
-    right: 0px;
+    right: 20px;
 }
 .bestseller-product .img-bestseller-product .title-img a{
     text-decoration: none;
@@ -519,7 +519,7 @@ div{
 }
 .img-bestseller-product .image-block{
     width: 100%;
-    height: 584px;
+    height: 500px;
     position: relative;
     /* border: 1px solid red; */
 }
@@ -640,12 +640,12 @@ div{
     text-align: center;
 }
 .second-banner .left-banner{
-    background-image: url(/img/banner2.jpg);
+    background-image: url(/storage//img/banner2.jpg);
     width: 50%;
     color: white;
 }
 .second-banner .right-banner{
-    background-image: url(/img/banner3.jpg);
+    background-image: url(/storage//img/banner3.jpg);
     width: 50%;
     color: white;
 

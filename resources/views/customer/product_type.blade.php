@@ -19,7 +19,7 @@
 
             <div class="img-bestseller-product">
                 <div class="image-block">
-                    <a href="#"><img src={{$pr_list->image}} alt="" class="layer1"></a>
+                    <a href="#"><img src="{{asset($pr_list->image)}}" alt="" class="layer1"></a>
                     <div class="white"></div>
                     <div class="size-section">
                         <div class="size">AVAILABLE SIZE</div>

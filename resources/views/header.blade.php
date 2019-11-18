@@ -15,7 +15,7 @@
                             <li>
                                 <a href={{route('product_type',$pr_type->type_name)}}>
                                     <p>{{$pr_type->type_name}}</p>
-                                    <img src="{{ $pr_type->image }}" alt="">
+                                    <img src="{{ asset($pr_type->image) }}" alt="">
                                 </a>
                             </li>
                         @endforeach
@@ -52,7 +52,11 @@
                 <p class="close">CLOSE</p>
             </div>
             <div class="main-content" id="cart_info">
+                @foreach($cart_details as $cart_detail)
+                <div class="name">{{$cart_detail ->name}}</div>
 
+
+                @endforeach
 
 
 

@@ -27,29 +27,29 @@
     <div class="show-section"id = {{$details[0]->product_id}}>
         <div class="img-button" >
             <div class="row-button">
-                <img id="img1" src={{$details[0]->image1}} alt="" onclick="myFunction(this);" class="get">
+                <img id="img1" src={{asset($details[0]->image1)}} alt="" onclick="myFunction(this);" class="get">
                 <div class="white-layer"></div>
             </div>
             <div class="row-button">
-                <img src={{$details[0]->image2}} alt="" onclick="myFunction(this);" class="get">
+                <img src={{asset($details[0]->image2)}} alt="" onclick="myFunction(this);" class="get">
                 <div class="white-layer"></div>
             </div>
             <div class="row-button">
-                <img src={{$details[0]->image3}} alt="" onclick="myFunction(this);" class="get">
+                <img src={{asset($details[0]->image3)}} alt="" onclick="myFunction(this);" class="get">
                 <div class="white-layer"></div>
             </div>
             <div class="row-button">
-                <img src={{$details[0]->image4}} alt="" onclick="myFunction(this);" class="get">
+                <img src={{asset($details[0]->image4)}} alt="" onclick="myFunction(this);" class="get">
                 <div class="white-layer"></div>
             </div>
             <div class="row-button">
-                <img src={{$details[0]->image5}} alt="" onclick="myFunction(this);" class="get">
+                <img src={{asset($details[0]->image5)}} alt="" onclick="myFunction(this);" class="get">
                 <div class="white-layer"></div>
             </div>
         </div>
         <div class="img-content">
             <!-- <span onclick="this.parentElement.style.display='none'">&times;</span> -->
-            <img id="expandedImg" style="width:100%" src={{$details[0]->image1}}>
+            <img id="expandedImg" style="width:100%" src={{asset($details[0]->image1)}}>
         </div>
         <div class="img-infor">
             <div class="_header" id="nameid">{{$name}}</div>
@@ -87,19 +87,19 @@
                     <label for="XXL" class="three-size">XXL</label>
                     <div class="check"></div>
                 </div>
-                <div class="custom-input xxxl">
-                    <input type="radio" id="XXXL" name="size" value="">
-                    <label for="XXXL" class="four-size">XXXL</label>
-                    <div class="check"></div>
-                </div>
+{{--                <div class="custom-input xxxl">--}}
+{{--                    <input type="radio" id="XXXL" name="size" value="">--}}
+{{--                    <label for="XXXL" class="four-size">XXXL</label>--}}
+{{--                    <div class="check"></div>--}}
+{{--                </div>--}}
 
 {{--                    <a href="{{route('pr_color','blue')}}">blue</a>--}}
-                    <a href= {{route('one_product',[$name,'blue'])}}>blue</a>
+{{--                    <a href= {{route('one_product',[$name,'blue'])}}>blue</a>--}}
 {{--                <button id = "bluebtn" type="button" onclick="ChangeColor()">blue</button>--}}
 
 
             </div>
-            <button id="buttonAdd"  type="button" onclick="addtocart()">ADD TO BAG</button>
+            <button id="buttonAdd"  type="button" ><a href="{{route('addCart',$details[0]->product_id)}}">ADD TO BAG</a> </button>
             <div class="information">
                 <p class="des">
                     the Cargo Drawcord Shorts are designed with a relaxed fit throughout, cargo pockets at the side seam and front, which extend past the length of the shorts, a stretch waistband, and is finished with a yellow elastic drawcord with metal aglets.

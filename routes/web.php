@@ -14,6 +14,8 @@
 //Route::get('/', function () {
 //    return view('welcome');
 //});
+use Illuminate\Support\Facades\Route;
+
 Route::get('/',[
     'as'=>'Homepage',
     'uses'=>'CustomerController@homepage'
@@ -44,10 +46,22 @@ Route::group(['prefix'=>"signup",'middleware'=>'checkLogin'],function (){
 Route::group(['prefix'=>'Admin','middleware'=>'checkLogout'],function (){
     Route::get('/','AdminController@adminHome')->name('adminHome');
 
+    Route::group(['prefix'=>'product'],function (){
+        Route::get('/', 'ProductController@all_product')->name('adminProduct');
+
+        Route::get('add','ProductController@getAddProduct')->name('addProduct');
+        Route::post('add','ProductController@postAddProduct');
+
+    });
+
 });
 Route::get('/logout','CustomerController@getLogout')->name('logout');
 
 //Auth::routes();
+Route::group(['prefix'=>'Cart'], function (){
+    Route::get('add/{id}/{color?}', 'CartController@addCart')->name('addCart');
+    Route::get('/preCheck-out', 'CartController@checkOut')->name('checkOut');
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
 

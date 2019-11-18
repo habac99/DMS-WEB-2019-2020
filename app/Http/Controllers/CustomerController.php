@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\customer;
 use App\product;
+use App\product_detail;
 use App\User;
 use App\product_type;
+use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 
@@ -25,9 +27,17 @@ class CustomerController extends Controller
     public function homepage(){
 
         $product_type = $this->product_type;
+        $cart_details = Cart::content();
+       // $best_seller = product_detail::with('product')->select('product_details.*','products.product_name')->orderBy('sold','desc')->limit(4)->get();
+        $best_seller = DB::table('product_details')
+                                ->join('products','product_details.product_id','=','products.product_id')
+                                ->select('product_details.*','products.product_name','products.unit_price')
+                                ->orderBy('sold','desc')
+                                ->limit(4)
+                                ->get();
         $new_product = DB::table('products')->orderBy('product_id', 'desc')->limit(4)->get();
-
-        return view('homepage', compact('product_type','new_product'));
+dd($cart_details);
+       // return view('homepage', compact('product_type','new_product','best_seller','cart_details'));
 
     }
     public function product_type (Request $req){

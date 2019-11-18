@@ -1,0 +1,83 @@
+.content-menu .panel-heading form{
+    margin-left: 20px;
+}
+.content-menu .panel-heading .form-group{
+    margin-bottom: 20px;
+}
+.content-menu .panel-heading .form-group p{
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: rgb(68, 68, 68);
+}
+.content-menu .panel-heading .form-group input[type=text]{
+    padding: 7px 10px;
+    border-radius: 3px;
+    border: 1px solid rgb(194, 194, 194);
+    width: 70%;
+    outline: none;
+}
+.content-menu .panel-heading .form-group input[type=number]{
+    padding: 7px 10px;
+    border-radius: 3px;
+    border: 1px solid rgb(194, 194, 194);
+    width: 70%;
+    outline: none;
+}
+.content-menu .panel-heading .form-group input[type=text]:focus{
+    border: 1px solid rgb(51, 122, 183);
+    border-radius: 3px;
+}
+.content-menu .panel-heading .form-group input[type=number]:focus{
+    border: 1px solid rgb(51, 122, 183);
+    border-radius: 3px;
+}
+.content-menu .panel-heading .form-group textarea{
+    width: 70%;
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 3px;
+    padding: 7px 10px;
+    outline: none;
+    margin-bottom: 10px;
+}
+.content-menu .panel-heading .form-group textarea:focus{
+    border: 1px solid rgb(51, 122, 183);
+    border-radius: 3px;
+}
+.content-menu .panel-heading .form-group input[type=submit]{
+    /* width: 70px; */
+    padding: 10px 15px;
+    border-radius: 3px;
+    margin-right: 10px;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    background-color: #30a5ff;
+    border: none;
+}
+.content-menu .panel-heading .form-group input[type=submit]:active{
+    background-color: #a3d7ff;
+}
+.content-menu .panel-heading .form-group a{
+    display: inline-block;
+    font-size: 15px;
+    padding: 10px 15px;
+    border-radius: 3px;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(255, 0, 0);
+}
+.content-menu .panel-heading .form-group a:active{
+    background-color: rgb(255, 148, 148);
+}
+#last{
+    padding-bottom: 30px;
+}
+#preview{
+    width: 70%;
+}
+.content-menu .panel-heading .form-group #preview img{
+    margin-right: 20px;
+    margin-top: 20px;
+}
+

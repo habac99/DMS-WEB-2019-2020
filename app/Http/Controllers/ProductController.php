@@ -70,7 +70,7 @@ class ProductController extends Controller
                 /*
                  * Lưu vào bảng product details
                  */
-                $latest = DB::table('products')->latest()->first()->get();
+                $latest = DB::table('products')->latest()->get();
                 $product_detail = new product_detail;
                 $product_detail->product_id = $latest[0]->product_id;
                 $product_detail->color = $req->color;

@@ -21,11 +21,11 @@
                 <p>Ảnh sản phẩm</p>
                 <input type="file" id="file-input" name="file[]" multiple>
                 <div id="preview">
-                    <img src={{asset($product_edit[0]->image1)}} alt="">
-                    <img src={{asset($product_edit[0]->image2)}}  alt="">
-                    <img src={{asset($product_edit[0]->image3)}}  alt="">
-                    <img src={{asset($product_edit[0]->image4)}} alt="">
-                    <img src={{asset($product_edit[0]->image5)}}  alt="">
+                    <img src="{{asset($product_edit[0]->image1)}}" alt="">
+                    <img src="{{asset($product_edit[0]->image2)}} " alt="">
+                    <img src="{{asset($product_edit[0]->image3)}} " alt="">
+                    <img src="{{asset($product_edit[0]->image4)}}" alt="">
+                    <img src="{{asset($product_edit[0]->image5)}} " alt="">
                 </div>
             </div>
             <div class="form-group">

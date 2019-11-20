@@ -1,7 +1,7 @@
 @extends('admin.master')
 
 @section('title')
-    Products
+    Orders
 @endsection
 @section('content')
     <div class="content-menu">

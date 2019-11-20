@@ -27,29 +27,29 @@
     <div class="show-section"id = {{$details[0]->product_id}}>
         <div class="img-button" >
             <div class="row-button">
-                <img id="img1" src={{asset($details[0]->image1)}} alt="" onclick="myFunction(this);" class="get">
+                <img id="img1" src="{{asset($details[0]->image1)}}" alt="" onclick="myFunction(this);" class="get">
                 <div class="white-layer"></div>
             </div>
             <div class="row-button">
-                <img src={{asset($details[0]->image2)}} alt="" onclick="myFunction(this);" class="get">
+                <img src="{{asset($details[0]->image2)}}" alt="" onclick="myFunction(this);" class="get">
                 <div class="white-layer"></div>
             </div>
             <div class="row-button">
-                <img src={{asset($details[0]->image3)}} alt="" onclick="myFunction(this);" class="get">
+                <img src="{{asset($details[0]->image3)}}" alt="" onclick="myFunction(this);" class="get">
                 <div class="white-layer"></div>
             </div>
             <div class="row-button">
-                <img src={{asset($details[0]->image4)}} alt="" onclick="myFunction(this);" class="get">
+                <img src="{{asset($details[0]->image4)}}" alt="" onclick="myFunction(this);" class="get">
                 <div class="white-layer"></div>
             </div>
             <div class="row-button">
-                <img src={{asset($details[0]->image5)}} alt="" onclick="myFunction(this);" class="get">
+                <img src="{{asset($details[0]->image5)}}" alt="" onclick="myFunction(this);" class="get">
                 <div class="white-layer"></div>
             </div>
         </div>
         <div class="img-content">
             <!-- <span onclick="this.parentElement.style.display='none'">&times;</span> -->
-            <img id="expandedImg" style="width:100%" src={{asset($details[0]->image1)}}>
+            <img id="expandedImg" style="width:100%" src="{{asset($details[0]->image1)}}">
         </div>
         <div class="img-infor">
             <div class="_header" id="nameid">{{$name}}</div>

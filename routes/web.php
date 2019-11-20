@@ -67,6 +67,7 @@ Route::group(['prefix'=>'Cart'], function (){
     Route::get('/preCheck-out', 'CartController@checkOut')->name('checkOut');
     Route::get('/delete/{id}','CartController@deleteCart')->name('deleteCart');
     Route::get('/update','CartController@updateCart')->name('updateCart');
+    Route::post('/preCheck-out','CartController@saveBill')->name('save');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');

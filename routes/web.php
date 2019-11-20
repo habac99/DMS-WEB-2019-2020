@@ -45,7 +45,7 @@ Route::group(['prefix'=>"signup",'middleware'=>'checkLogin'],function (){
 });
 Route::group(['prefix'=>'Admin','middleware'=>'checkLogout'],function (){
     Route::get('/','AdminController@adminHome')->name('adminHome');
-
+    Route::get('/order','AdminController@getOrder')->name('getOrder');
     Route::group(['prefix'=>'product'],function (){
         Route::get('/', 'ProductController@all_product')->name('adminProduct');
 
@@ -53,9 +53,9 @@ Route::group(['prefix'=>'Admin','middleware'=>'checkLogout'],function (){
         Route::post('add','ProductController@postAddProduct');
 
         Route::get('/edit/{id}/{color}','ProductController@getEditProduct')->name('editProduct');
-       // Route::post()
-        Route::get('/order','AdminController@getOrder')->name('getOrder');
+        Route::post('/edit/{id}/{color}','ProductController@postEditProduct');
 
+        Route::get('/delete/{id}/{color}','ProductController@deleteProduct')->name('deleteProduct');
     });
 
 });

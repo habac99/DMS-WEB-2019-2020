@@ -5,24 +5,7 @@
 @endsection
 @section('content')
 
-{{--    <script>--}}
-{{--        var xhttp =  new XMLHttpRequest();--}}
-{{--        xhttp.open("get","details.json",true);--}}
-{{--        xhttp.send();--}}
-{{--        var blue = document.getElementById('bluebtn');--}}
-{{--        var img1 = document.getElementById('img1');--}}
-{{--        var details = JSON.parse(this.responseText);--}}
-{{--        //--}}
-{{--        function ChangeColor(color) {--}}
 
-{{--            for (var i = 0; i < details.length(); i++) {--}}
-{{--                if (details.color === color) {--}}
-{{--                    img1.scr = "/img/allproduct/denim/m1-denim-blue-1.jpg";--}}
-
-{{--                }--}}
-{{--            }--}}
-{{--        }--}}
-{{--    </script>--}}
     <div class="show-container">
     <div class="show-section"id = {{$details[0]->product_id}}>
         <div class="img-button" >

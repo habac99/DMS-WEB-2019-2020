@@ -40,7 +40,7 @@
                         <td>XS, S, M, L, XL, XXL, XXXL</td>
                         <td class="btn-list">
                             <a href="{{route('editProduct',[$each_pr->product_id,$each_pr->color])}}" class="change-btn modify">Edit</a>
-                            <a href="#" class="change-btn delete">Remove</a>
+                            <a href="{{route('deleteProduct',[$each_pr->product_id,$each_pr->color])}}" class="change-btn delete">Remove</a>
                         </td>
                     </tr>
                         @endforeach

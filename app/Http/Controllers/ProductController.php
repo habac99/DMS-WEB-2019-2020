@@ -92,9 +92,46 @@ class ProductController extends Controller
 
     }
     public function getEditProduct(Request $req){
-        $product_edit = DB::table('product_details')-> where('product_id',$req->id)->where('color',$req->color)->get();
+        $product_edit = DB::table('product_details')
+                                  ->join('products','product_details.product_id','=','products.product_id')
+                                  ->select('product_details.*','products.product_name','products.unit_price','products.description')
+                                -> where('product_details.product_id',$req->id)->where('product_details.color',$req->color)->get();
 
         return view('admin.editProduct',compact('product_edit'));
+    }
+    public function postEditProduct( Request $req){
+        $product = new product;
+        $product_details = new product_detail;
+        if($req->hasFile('img')) {
+            $photos = $req->file('img');
+//            $image = 'storage/img/' .$req->category .'/'. $photos[0]->getClientOriginalName();
+
+            $image = 'storage/img/' .'/'. $photos[0]->getClientOriginalName();
+            $product::where('product_id', $req->id)->update(['product_name' => $req->pr_name,
+                                                            'description' => $req->description,
+                                                            'unit_price' => $req->price,
+                                                            ''
+
+            ]);
+            $product_details::where('product_id', $req->id)->where('color', $req->color)->update();
+        }
+
+
+
+    }
+    public function deleteProduct(Request $req){
+
+        $count   = DB::table('product_details')->where('product_id', $req->id)->get();
+        if(count($count)==1){
+            DB::table('product_details')->where('product_id',$req->id)->where('product_color',$req->color)->delete();
+            product::destroy($req->id);
+
+
+
+        }else{
+            DB::table('product_details')->where('product_id',$req->id)->where('product_color',$req->color)->delete();
+        }
+        return redirect('/Admin/product');
     }
 
 }

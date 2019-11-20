@@ -42,8 +42,8 @@
               <div><a href={{route('logout')}}>Log Out</a> </div>
             @else
                 <div><a href={{route('mLogin')}}>My account</a></div>
-                <a href="{{route('checkOut')}}" class="fas fa-shopping-cart cart" >{{Cart::count()}}</a>
-
+                <a href="{{route('checkOut')}}" class="fas fa-shopping-cart cart" ></a>
+                <div class="count-cart">{{Cart::count()}} </div>
             @endif
         </div>
 

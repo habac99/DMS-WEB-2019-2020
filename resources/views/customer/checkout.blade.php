@@ -22,7 +22,7 @@
         }
     </script>
 
-    <div class="container">
+
         @if(Cart::count()>0)
         <div class="left">
             <p>s l m p l e</p>
@@ -147,7 +147,7 @@
         @else
             <h2> giỏ hàng rỗng </h2>
         @endif
-    </div>
+
 
     @endsection
 

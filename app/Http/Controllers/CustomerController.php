@@ -41,12 +41,12 @@ class CustomerController extends Controller
 
     }
     public function product_type (Request $req){
-//        $query = DB::table('product_types')->where('type_name', $req->type_name)->get();
-//        $id = $query[0]->type_id;
+
 
         $type_name = $req->type_name;
         $product_type = $this->product_type;
-       // $product_type = DB::table('product_types')->get();
+//       $product_list2 = DB::table('product_details')
+//                                 ->join()
         $product_list =  DB::table('products')->where('type_name', $type_name)->get();
 
         return view('customer.product_type', compact('type_name','product_type','product_list'));

@@ -36,18 +36,18 @@ class CustomerController extends Controller
                                 ->limit(4)
                                 ->get();
         $new_product = DB::table('products')->orderBy('product_id', 'desc')->limit(4)->get();
-dd($cart_details);
-       // return view('homepage', compact('product_type','new_product','best_seller','cart_details'));
+//dd($cart_details);
+        return view('homepage', compact('product_type','new_product','best_seller','cart_details'));
 
     }
     public function product_type (Request $req){
-        $query = DB::table('product_types')->where('type_name', $req->type_name)->get();
-        $id = $query[0]->type_id;
+//        $query = DB::table('product_types')->where('type_name', $req->type_name)->get();
+//        $id = $query[0]->type_id;
 
         $type_name = $req->type_name;
         $product_type = $this->product_type;
        // $product_type = DB::table('product_types')->get();
-        $product_list =  DB::table('products')->where('type_id', $id)->paginate(3);
+        $product_list =  DB::table('products')->where('type_name', $type_name)->get();
 
         return view('customer.product_type', compact('type_name','product_type','product_list'));
 
@@ -140,14 +140,36 @@ dd($cart_details);
 //            );
 //        } catch (ValidationException $e) {
 //        }
-        $user = new User();
-        $user->first_name = $req ->firstname;
-        $user->last_name = $req->lastname;
-        $user->email = $req ->email;
-        $user->password = bcrypt($req->password);
-        $user->save();
-        Auth::login($user,true);
-        return redirect()->intended('/');
+            $val = customer::where('email',$req->email)->get();
+//          if( !$this->validate($req,
+//                [
+//                    'email' => 'unique:customers,email',
+//                ],
+//                [
+//                    'email.unique'=>'Email exist'
+//                ]
+//
+//            )
+//          ){
+//              return back()->withInput()->with('error', 'Email exist');
+//          }
+        if(count($val)){
+            return back()->withInput()->with('error', 'Email exist');
+
+        }
+          else {
+
+              $user = new User();
+              $user->first_name = $req->firstname;
+              $user->last_name = $req->lastname;
+              $user->email = $req->email;
+              $user->password = bcrypt($req->password);
+              $user->phone_number = $req->phone;
+              $user->save();
+              Auth::login($user, true);
+              return redirect()->intended('/');
+          }
+
 
 
     }

@@ -53,7 +53,7 @@
         </div>
         <div class="img-infor">
             <div class="_header" id="nameid">{{$name}}</div>
-            <div class="_color" id="colorid">{{$details[0]->color}}</div>
+            <div class="_color" name="color">{{$details[0]->color}}</div>
             <div class="_cost" id = "priceid">50 $</div>
             <div class="_color-link"></div>
             <div class="select-size">
@@ -87,19 +87,10 @@
                     <label for="XXL" class="three-size">XXL</label>
                     <div class="check"></div>
                 </div>
-{{--                <div class="custom-input xxxl">--}}
-{{--                    <input type="radio" id="XXXL" name="size" value="">--}}
-{{--                    <label for="XXXL" class="four-size">XXXL</label>--}}
-{{--                    <div class="check"></div>--}}
-{{--                </div>--}}
-
-{{--                    <a href="{{route('pr_color','blue')}}">blue</a>--}}
-{{--                    <a href= {{route('one_product',[$name,'blue'])}}>blue</a>--}}
-{{--                <button id = "bluebtn" type="button" onclick="ChangeColor()">blue</button>--}}
 
 
             </div>
-            <button id="buttonAdd"  type="button" ><a href="{{route('addCart',$details[0]->product_id)}}">ADD TO BAG</a> </button>
+            <button id="buttonAdd"  type="button" ><a href="{{route('addCart',[$details[0]->product_id,$details[0]->color])}}">ADD TO BAG</a> </button>
             <div class="information">
                 <p class="des">
                     the Cargo Drawcord Shorts are designed with a relaxed fit throughout, cargo pockets at the side seam and front, which extend past the length of the shorts, a stretch waistband, and is finished with a yellow elastic drawcord with metal aglets.

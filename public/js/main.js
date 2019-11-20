@@ -58,32 +58,77 @@ document.addEventListener("DOMContentLoaded",function(){
         overflow.classList.remove('remove-scroll');
     }
 },false);
-
-
+//
+//
 /*-------------------------------------------------show--------------------------------*/
 function myFunction(imgs) {
     var expandImg = document.getElementById("expandedImg");
     expandImg.src = imgs.src;
     expandImg.parentElement.style.display = "block";
 }
-function addtocart() {
-    var buttonAdd = document.getElementById("buttonAdd");
-    var p_name = document.getElementById("nameid");
-    var p_color = document.getElementById("colorid");
-    var p_price = document.getElementById("priceid");
-    var cart = document.getElementById("cart_info");
-  //  var info = cart.getElementsByTagName("p");
-    // var now = info.innerText;
-    buttonAdd.onclick = function () {
-        var name = document.createElement('p');
-        name.innerHTML = p_name.innerHTML;
-        cart.appendChild(name);
-        console.log(name);
 
-
-    }
-}
-
+// var calulate = function () {
+//     var arr = document.getElementById('tbody-container').childNodes;
+//     var subtotal = 0;
+//     console.log(arr[1].childNodes[7].textContent.split(' ')[0]);
+//     for (var i = 0; i < arr.length; i++) {
+//         if (i % 2 === 1) {
+//             subtotal += parseFloat(arr[i].childNodes[7].textContent.split(' ')[0]);
+//         }
+//     }
+//     // Hien thi len UI
+//     var subtotal_content = document.getElementsByClassName('sub-number');
+//     console.log(subtotal_content);
+//
+//     subtotal_content[0].textContent = subtotal + " $";
+//     console.log(subtotal_content[0].textContent.split(' ')[0]);
+//
+//     //tong = tong + ship
+//     document.getElementsByClassName('total-number')[0].textContent = subtotal + " $";
+// }
+//
+// // check class
+// function hasClass(element, className) {
+//     return (' ' + element.className + ' ').indexOf(' ' + className + ' ') > -1;
+// }
+//
+// document.getElementById('tbody-container').addEventListener('click', function (event) {
+//
+//     // Delete
+//     if (hasClass(event.target.parentNode, 'delete-btn')) {
+//         var el = event.target.parentNode.parentNode;
+//         var ell = el.parentNode;
+//
+//         el.parentNode.removeChild(el);
+//     }
+//
+//
+//
+//     var current_target = event.target;
+//     if (hasClass(current_target, 'inc')) {
+//
+//         var count = current_target.parentNode.parentNode.childNodes[5].childNodes[3].textContent;
+//
+//         count++;
+//
+//         current_target.parentNode.parentNode.childNodes[5].childNodes[3].textContent = count;
+//         calulate();
+//
+//     } else if (hasClass(current_target, 'exp')) {
+//         var count = current_target.parentNode.parentNode.childNodes[5].childNodes[3].textContent;
+//         if (count > 1) {
+//             count--;
+//             current_target.parentNode.parentNode.childNodes[5].childNodes[3].textContent = count;
+//             calulate()
+//         }
+//
+//     }
+//
+//
+// })
+//
+//
+// calulate();
 
 
 

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\bill;
+use App\product_detail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -22,11 +24,15 @@ class AdminController extends Controller
 
 
     }
-    public function all_product(){
-        return view('admin.products');
-    }
+//    public function all_product(){
+//        $all_product = product_detail::all();
+//        return view('admin.products',$all_product);
+//    }
 
-    public function getAddProduct(){
+    public function getOrder(){
+        $orders= bill::where('isConfirm',0)->get();
+
+        return view('admin.orders',compact('orders'));
 
     }
     public function postAddproduct(){

@@ -1,9 +1,12 @@
+{{--<link rel="stylesheet" href="/css/admin.css">--}}
 @extends('admin.master')
+
 @section('title')
     Admin Home
 @endsection
 @section('content')
-<div>
+
+
     <div class="content-menu">
         <div class="name-content">Trang chủ</div>
         <div class="information-content">
@@ -30,5 +33,6 @@
             </div>
         </div>
     </div>
-</div>
+
+
 @endsection

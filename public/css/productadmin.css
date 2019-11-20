@@ -43,6 +43,7 @@ table {
     /* background: #fff; */
     border-collapse: collapse;
     width: 100%;
+    counter-reset: tableCount;
     /* border: 1px solid red; */
 }
 table>thead>tr>th {
@@ -50,6 +51,10 @@ table>thead>tr>th {
     height: 50px;
     color:rgb(44, 44, 44);
     font-weight: bold;
+}
+.autoIncre:before {
+    content: counter(tableCount);
+    counter-increment: tableCount;
 }
 /*
 tbody td:last-child {
@@ -78,7 +83,7 @@ tbody tr td{
     text-align: center;
 }
 .img-list img{
-    width: 100px;
+    width: 80px;
 }
 .id{
     width: 40px;

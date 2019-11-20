@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/css/admin.css">
-    <link rel="stylesheet" href="/css/productadmin.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/css/editadmin.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="/css/productadmin.css">
     <link rel="stylesheet" href="/css/addproductadmin.css">
+
     <title>
         @section('title')
 
@@ -41,17 +43,18 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href={{route('getOrder')}}>
                         <i class="far fa-calendar-check"></i>
                         <p>Đơn hàng</p>
                     </a>
                 </li>
             </ul>
         </div>
-    </div>
-    <div class="container2">
         @yield('content')
     </div>
+
+{{--        @yield('content')--}}
+
     <script src="/js/mainAdmin.js"></script>
 </body>
 </html>

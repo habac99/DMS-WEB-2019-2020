@@ -11,15 +11,19 @@ class CartController extends Controller
     //
     public function addCart(Request $req){
         $product = Product::find($req->id);
-        Cart::add(['id' => $req->id, 'name' => $product->product_name, 'qty' => 1,'weight' => 550, 'price'=>$product->unit_price,'options' => ['color'=>$req->color]]);
-        $data = Cart::content();
-          return redirect()->intended('/Cart/preCheck-out');
-        //dd($data);
-      //  return back();
+
+        Cart::add(['id' => $req->id, 'name' => $product->product_name, 'qty' => 1,'weight' => 550, 'price'=>$product->unit_price,'options' => ['color'=>$req->color,'img'=>$product->image]]);
+        return back();
     }
 
     public  function checkOut(){
-        $data = Cart::content();
-        dd($data);
+        $items = Cart::content();
+        $product_type = $this->product_type;
+       return view('customer.checkout',compact('product_type','items'));
+//        $data = Cart::content();
+//        dd($data);
+    }
+    public function updateCart(Request $req){
+        Cart::update($req->rowId, $req->qty);
     }
 }

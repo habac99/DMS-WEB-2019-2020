@@ -52,6 +52,10 @@ Route::group(['prefix'=>'Admin','middleware'=>'checkLogout'],function (){
         Route::get('add','ProductController@getAddProduct')->name('addProduct');
         Route::post('add','ProductController@postAddProduct');
 
+        Route::get('/edit/{id}/{color}','ProductController@getEditProduct')->name('editProduct');
+       // Route::post()
+        Route::get('/order','AdminController@getOrder')->name('getOrder');
+
     });
 
 });
@@ -59,8 +63,9 @@ Route::get('/logout','CustomerController@getLogout')->name('logout');
 
 //Auth::routes();
 Route::group(['prefix'=>'Cart'], function (){
-    Route::get('add/{id}/{color?}', 'CartController@addCart')->name('addCart');
+    Route::get('/add/{id}', 'CartController@addCart')->name('addCart');
     Route::get('/preCheck-out', 'CartController@checkOut')->name('checkOut');
+    Route::get('/update','CartController@updateCart')->name('updateCart');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');

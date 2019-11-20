@@ -64,6 +64,7 @@
                             <div class="text">Phone</div>
                             <input type="text" value={{Auth::User()->phone_number}} >
                         </div>
+                    </div>
                 @else
                 <p class="header">CONTACT INFORMATION</p>
                 <div class="contact">
@@ -97,10 +98,8 @@
                     @endif
                     <button class="btn-submit-new" type="submit" name="subcribe">ACCEPT</button>
                 </div>
-
-                </div>
             </form>
-
+        </div>
             <div class="right">
             <table class="product-table scroll">
                 <thead>
@@ -119,10 +118,8 @@
                         <div>{{$item->options->color}}</div>
                     </td>
                     <td class="count-width">
-                        <i class="fas fa-chevron-up inc"></i>
 {{--                        <div class="number" id="get-number" >{{$item->qty}} </div>--}}
                         <input type="number" value="{{$item->qty}}" onchange="updateCart(this.value,'{{$item->rowId}}')">
-                        <i class="fas fa-chevron-down exp"></i>
                     </td>
                     <td class="price-width">${{$item->price}}</td>
                     <td class="price-width">${{$item->price * $item->qty }}</td>
@@ -146,7 +143,7 @@
                 <div class="total-number">${{Cart::total()}}</div>
             </div>
         </div>
-        </div>
+
         @else
             <h2> giỏ hàng rỗng </h2>
         @endif

@@ -34,7 +34,11 @@
         <div class="right-menu">
             @if(Auth::check() )
                 <div><a href="">{{Auth::User()->first_name}}</a></div>
-              <a href="{{route('checkOut')}}" class="fas fa-shopping-cart cart" >{{Cart::count()}} </a>
+            <div class="container-cart">
+                <a href="{{route('checkOut')}}" class="fas fa-shopping-cart cart" ></a>
+                <div class="count-cart">{{Cart::count()}} </div>
+            </div>
+
               <div><a href={{route('logout')}}>Log Out</a> </div>
             @else
                 <div><a href={{route('mLogin')}}>My account</a></div>

@@ -41,7 +41,7 @@
                 <div class="information">BLACK</div>
             </div>
             @endforeach
-                {{$product_list->links()}}
+
         </div>
     </div>
 @endsection

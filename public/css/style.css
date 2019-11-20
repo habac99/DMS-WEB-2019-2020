@@ -142,10 +142,21 @@ div{
     /* border: 1px solid green; */
     align-items: center;
 }
+.right-menu .container-cart{
+    border: 1px solid red;
+}
 .right-menu .cart{
     margin-left: 20px;
     font-size: 23px;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+.right-menu .cart .count-cart{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 5px;
 }
 .right-menu div>a{
     text-decoration: none;
@@ -255,6 +266,7 @@ div{
 .side-cart .content-cart .check-out .content-check-out a:hover{
     background-color: rgb(128, 128, 128);
 }
+
 /* ------------------------------------------------------------------------------*/
 /*--------------------------------main banner content----------------------------*/
 /* ------------------------------------------------------------------------------*/

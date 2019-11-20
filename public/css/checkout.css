@@ -9,7 +9,7 @@
     overflow-x: hidden;
 }
 body{
-} 
+}
 */
 .container{
     margin-top: 100px;
@@ -19,6 +19,7 @@ body{
     display: flex;
     margin-left: auto;
     margin-right: auto;
+    /*border: 1px solid red;*/
 }
 .left,.right{
     width:50%;
@@ -160,7 +161,7 @@ table.scroll tbody td i.inc,
 table.scroll tbody td i.exp{
     cursor: pointer;
 }
-thead tr th { 
+thead tr th {
     height: 30px;
     line-height: 30px;
     /*text-align: left;*/
@@ -169,7 +170,7 @@ thead tr th {
     height: 80px;
 } */
 
-tbody { 
+tbody {
     /* border-top: 1px solid black;  */
 }
 

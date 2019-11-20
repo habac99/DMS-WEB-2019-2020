@@ -34,45 +34,41 @@
         <div class="right-menu">
             @if(Auth::check() )
                 <div><a href="">{{Auth::User()->first_name}}</a></div>
-                <div class="fas fa-shopping-cart cart"></div>
-                <div><a href={{route('logout')}}>Log Out</a> </div>
+              <a href="{{route('checkOut')}}" class="fas fa-shopping-cart cart" >{{Cart::count()}} </a>
+              <div><a href={{route('logout')}}>Log Out</a> </div>
             @else
                 <div><a href={{route('mLogin')}}>My account</a></div>
-                <div class="fas fa-shopping-cart cart"></div>
+                <a href="{{route('checkOut')}}" class="fas fa-shopping-cart cart" >{{Cart::count()}}</a>
 
             @endif
         </div>
 
     </div>
-    <div class="side-cart">
-        <div class="black-screen"></div>
-        <div class="content-cart">
-            <div class="content">
-                <p>BAG</p>
-                <p class="close">CLOSE</p>
-            </div>
-            <div class="main-content" id="cart_info">
-                @foreach($cart_details as $cart_detail)
-                <div class="name">{{$cart_detail ->name}}</div>
-
-
-                @endforeach
+{{--    <div class="side-cart">--}}
+{{--        <div class="black-screen"></div>--}}
+{{--        <div class="content-cart">--}}
+{{--            <div class="content">--}}
+{{--                <p>BAG</p>--}}
+{{--                <p class="close">CLOSE</p>--}}
+{{--            </div>--}}
+{{--            <div class="main-content" id="cart_info">--}}
 
 
 
 
 
-            </div>
-            <div class="check-out">
-                <div class="content-check-out">
-                    <div class="sumtotal-money">
-                        <p>SUMTOTAL(0 item)</p>
-                        <p class="money">0$</p>
-                    </div>
-                    <a href="#">CHECK OUT</a>
-                </div>
-            </div>
-        </div>
-    </div>
+
+{{--            </div>--}}
+{{--            <div class="check-out">--}}
+{{--                <div class="content-check-out">--}}
+{{--                    <div class="sumtotal-money">--}}
+{{--                        <p>SUMTOTAL(0 item)</p>--}}
+{{--                        <p class="money">0$</p>--}}
+{{--                    </div>--}}
+{{--                    <a href="#">CHECK OUT</a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
 </div>
 

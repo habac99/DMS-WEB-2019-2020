@@ -124,9 +124,9 @@
                         <input type="number" value="{{$item->qty}}" onchange="updateCart(this.value,'{{$item->rowId}}')">
                         <i class="fas fa-chevron-down exp"></i>
                     </td>
-                    <td class="price-width">{{$item->price}}</td>
-                    <td class="price-width">{{$item->price * $item->qty }}</td>
-                    <td class="delete-btn"><i class="far fa-trash-alt" id="get-delete"></i></td>
+                    <td class="price-width">${{$item->price}}</td>
+                    <td class="price-width">${{$item->price * $item->qty }}</td>
+                   <td class="delete-btn"> <a  href="{{route('deleteCart',$item->rowId)}}"  ><i class="far fa-trash-alt" id="get-delete"></i> </a>  </td>
                 </tr>
                     @endforeach
                 </tbody>
@@ -134,7 +134,7 @@
             <hr class="hr-content">
             <div class="subtotal">
                 <div>SUBTOTAL</div>
-                <div class="sub-number">{{Cart::total()}}</div>
+                <div class="sub-number">${{Cart::total()}}</div>
             </div>
             <div class="shipping">
                 <div>SHIPPING</div>
@@ -143,7 +143,7 @@
             <hr class="hr-content">
             <div class="total">
                 <div>TOTAL</div>
-                <div class="total-number">{{Cart::total()}}</div>
+                <div class="total-number">${{Cart::total()}}</div>
             </div>
         </div>
         </div>

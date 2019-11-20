@@ -8,7 +8,7 @@
     <div class="main-banner-content">
         <p class="above-heading">JUST RELEASED</p>
         <h2 class="heading-text">LOOKBOOK 2077</h2>
-        <a href={{route('addProduct')}} class="text-btn">SHOP NOW</a>
+        <a href={{route('allproduct')}} class="text-btn">SHOP NOW</a>
     </div>
 </div>
 

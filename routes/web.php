@@ -65,6 +65,7 @@ Route::get('/logout','CustomerController@getLogout')->name('logout');
 Route::group(['prefix'=>'Cart'], function (){
     Route::get('/add/{id}', 'CartController@addCart')->name('addCart');
     Route::get('/preCheck-out', 'CartController@checkOut')->name('checkOut');
+    Route::get('/delete/{id}','CartController@deleteCart')->name('deleteCart');
     Route::get('/update','CartController@updateCart')->name('updateCart');
 });
 

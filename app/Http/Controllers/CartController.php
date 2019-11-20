@@ -23,6 +23,10 @@ class CartController extends Controller
 //        $data = Cart::content();
 //        dd($data);
     }
+    public function deleteCart(Request $req){
+        Cart::remove($req->id);
+        return back();
+    }
     public function updateCart(Request $req){
         Cart::update($req->rowId, $req->qty);
     }

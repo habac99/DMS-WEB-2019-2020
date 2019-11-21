@@ -32,6 +32,9 @@
 
 
         <div class="right-menu">
+            <form method="get" action="{{route('search')}}">
+            <input type="text" required name="keyword" class="form-control" placeholder="Search product" />
+            </form>
             @if(Auth::check() )
                 <div><a href="">{{Auth::User()->first_name}}</a></div>
             <div class="container-cart">
@@ -48,6 +51,7 @@
                 </div>
 
             @endif
+
         </div>
 
     </div>

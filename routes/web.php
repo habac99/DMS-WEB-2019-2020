@@ -24,10 +24,18 @@ Route::get('/product_type/{type_name}',[
     'as'=> 'product_type',
     'uses' => 'CustomerController@product_type'
 ]);
-Route::get('/Allproducts',[
-    'as'=>'allproduct',
-    'uses'=>'CustomerController@all_product'
-]);
+//Route::get('/Allproducts',[
+//    'as'=>'allproduct',
+//    'uses'=>'CustomerController@all_product'
+//]);
+Route::group(['prefix'=>'Allproduct'],function (){
+    route::get('/','CustomerController@all_product')->name('allproduct');
+
+
+});
+Route::get('/test', 'TestController@index');
+Route::get('test/search', 'TestController@search');
+route::get('/search','SearchController@search')->name('search');
 
 
 route::get('/product/{product_name}/{color?}', 'CustomerController@product_color')->name('one_product');

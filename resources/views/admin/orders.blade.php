@@ -25,13 +25,13 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($orders as $order)
+                    @foreach($order2 as $order)
                         <tr>
                             <td class="id">{{$order->bill_id}}</td>
                             <td>{{$order->shipTo}}</td>
-                            <td>email</td>
+                            <td>{{$order->email}}</td>
                             <td class="img-list">
-                                345
+                                {{$order->product_list}}
                             </td>
                             <td>{{$order->total_payment}}</td>
 {{--                            <td>XS, S, M, L, XL, XXL, XXXL</td>--}}

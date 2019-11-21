@@ -1,5 +1,5 @@
 @extends('master')
-{{--<link rel="stylesheet" href="/css/bootstrap.min.css">--}}
+<link rel="stylesheet" href="/css/bootstrap.min.css">
 @section('title')
     All Products
 @endsection

@@ -77,9 +77,13 @@ class CustomerController extends Controller
         $query = DB::table('products')->where('product_name', $req->product_name)->get();
         $id = $query[0]->product_id;
         if ($req->color) {
-            $details = DB::table('product_details')->where('product_id', $id)->where('color', $req->color)->get();
+            $details = DB::table('product_details')->join('products','product_details.product_id','=','products.product_id')
+                                                         ->select('product_details.*','products.unit_price')
+                                                         ->where('product_details.product_id', $id)->where('product_details.color', $req->color)->get();
         }else{
-            $details = DB::table('product_details')->where('product_id',$id)->limit(1)->get();
+            $details = DB::table('product_details')->join('products','product_details.product_id','=','products.product_id')
+                                                         ->select('product_details.*','products.unit_price')
+                                                         ->where('product_details.product_id',$id)->limit(1)->get();
 
         }
         $product_type = $this->product_type;

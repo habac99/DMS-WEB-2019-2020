@@ -37,7 +37,7 @@
         <div class="img-infor">
             <div class="_header" id="nameid">{{$name}}</div>
             <div class="_color" name="color">{{$details[0]->color}}</div>
-            <div class="_cost" id = "priceid">50 $</div>
+            <div class="_cost" id = "priceid">{{$details[0]->unit_price}}</div>
             <div class="_color-link"></div>
             <div class="select-size">
                 <div class="custom-input x">

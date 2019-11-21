@@ -106,31 +106,28 @@
             <div class="right">
                 <table class="product-table scroll">
                     <thead>
-                    <th class="img-width"></th>
-                    <th class="des-width"></th>
-                    <th class="count-width"></th>
-                    <th class="price-width"></th>
-                    <th class="delete-btn"></th>
+                        <th class="img-width"></th>
+                        <th class="des-width"></th>
+                        <th class="count-width"></th>
+                        <th class="price-width"></th>
+                        <th class="delete-btn"></th>
                     </thead>
                     <tbody id="tbody-container">
-                    @foreach($items as $item)
-                    <tr id="product-1">
-                        <td class="img-width"><img src="{{asset($item->options->img)}}" alt=""></td>
-                        <td class="des-width">
-                            <div>{{$item->name}}</div>
-                            <div>{{$item->options->color}}</div>
-                        </td>
-                        <td class="count-width">
-{{--                            <i class="fas fa-chevron-up inc"></i>--}}
-{{--                            <div class="number" id="get-number" >{{$item->qty}} </div>--}}
-                            <input type="number" value="{{$item->qty}}" onchange="updateCart(this.value,'{{$item->rowId}}')">
-{{--                            <i class="fas fa-chevron-down exp"></i>--}}
-                        </td>
-                        <td class="price-width">${{$item->price}}</td>
-                        <td class="price-width">${{$item->price * $item->qty }}</td>
-                       <td class="delete-btn"> <a  href="{{route('deleteCart',$item->rowId)}}"  ><i class="far fa-trash-alt" id="get-delete"></i> </a>  </td>
-                    </tr>
-                        @endforeach
+                        @foreach($items as $item)
+                        <tr id="product-1">
+                            <td class="img-width"><img src="{{asset($item->options->img)}}" alt=""></td>
+                            <td class="des-width">
+                                <div>{{$item->name}}</div>
+                                <div>{{$item->options->color}}</div>
+                            </td>
+                            <td class="count-width">
+                                <input type="number" value="{{$item->qty}}" onchange="updateCart(this.value,'{{$item->rowId}}')">
+                            </td>
+                            <td class="price-width">${{$item->price}}</td>
+                            <td class="price-width">${{$item->price * $item->qty }}</td>
+                            <td class="delete-btn"> <a  href="{{route('deleteCart',$item->rowId)}}"  ><i class="far fa-trash-alt" id="get-delete"></i> </a>  </td>
+                        </tr>
+                            @endforeach
                     </tbody>
                 </table>
                 <hr class="hr-content">

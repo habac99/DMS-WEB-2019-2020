@@ -1,9 +1,11 @@
 @extends('master')
 <link rel="stylesheet" href="/css/bootstrap.min.css">
+
 @section('title')
     All Products
 @endsection
 @section('content')
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <div class="product-header">
     <div class="header-text">
         ALL PRODUCT
@@ -30,7 +32,7 @@
                     <p>${{$each_pr->unit_price}}</p>
                 </div>
             </div>
-            <div class="information">GREEN/BLACK</div>
+{{--            <div class="information">GREEN/BLACK</div>--}}
         </div>
             @endforeach
     </div>

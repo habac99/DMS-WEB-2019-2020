@@ -366,6 +366,7 @@ div{
     letter-spacing: 2px;
     margin-top: 5px;
     margin-bottom: 5px;
+    text-transform: uppercase;
 }
 .new-product .img-new-product .title-img a{
     text-decoration: none;
@@ -509,6 +510,7 @@ div{
     margin-bottom: 5px;
     display: flex;
     position: relative;
+    text-transform: uppercase;
 }
 .bestseller-product .img-bestseller-product .title-img .cost{
     position: absolute;

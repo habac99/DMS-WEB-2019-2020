@@ -73,7 +73,7 @@
 
 
             </div>
-            <button id="buttonAdd"  type="button" ><a href="{{route('addCart',[$details[0]->product_id,$details[0]->color])}}">ADD TO BAG</a> </button>
+            <a href="{{route('addCart',[$details[0]->product_id,$details[0]->color])}}"><button id="buttonAdd"  type="button" >ADD TO BAG</button></a>
             <div class="information">
                 <p class="des">
                     the Cargo Drawcord Shorts are designed with a relaxed fit throughout, cargo pockets at the side seam and front, which extend past the length of the shorts, a stretch waistband, and is finished with a yellow elastic drawcord with metal aglets.

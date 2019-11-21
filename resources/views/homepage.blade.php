@@ -12,7 +12,7 @@
     </div>
 </div>
 
-<div class="product-section">
+<div class="product-section first">
     <div class="new-product-header">
         <h4>WHATS NEW</h4>
     </div>

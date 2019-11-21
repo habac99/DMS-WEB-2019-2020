@@ -11,11 +11,19 @@
 body{
 }
 */
-.container{
+.empty-cart{
+    margin-bottom: 100px;
     margin-top: 100px;
+    text-align: center;
+    /*border: 1px solid red;*/
+    width: 93%;
+    font-size: 20px;
+}
+.container{
+    margin-top: 50px;
     margin-bottom: 100px;
     padding-top: 30px;
-    width: 70%;
+    width: 85%;
     display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -27,6 +35,10 @@ body{
 }
 .left{
     padding-right: 70px;
+    border-right: 1px solid rgb(129, 129, 129);
+}
+.right{
+    margin-left: 15px;
 }
 .left > p{
     text-transform: lowercase;
@@ -96,7 +108,7 @@ input:focus{
 }
 .btn-submit-new{
     border: none;
-    padding: 10px 20px;
+    padding: 10px 30px;
     background-color: black;
     color: white;
     float: right;
@@ -119,6 +131,10 @@ table.scroll tbody {
     overflow-x: hidden;
     transition: 0.3s;
 }
+table.scroll tbody tr{
+    padding-bottom: 5px;
+    display: block;
+}
 table.scroll tbody:hover {
     overflow-y: auto;
 }
@@ -130,7 +146,7 @@ table.scroll thead th {
 }
 table.scroll tbody td.img-width,
 table.scroll thead th.img-width{
-    width: 90px;
+    width: 200px;
 }
 table.scroll tbody td.des-width,
 table.scroll thead th.des-width{
@@ -140,11 +156,14 @@ table.scroll thead th.des-width{
 }
 table.scroll tbody td.count-width,
 table.scroll thead th.count-width{
-    padding-left: 50px;
+    /*padding-left: 50px;*/
     /* border-right: 1px solid black; */
 }
-table.scroll tbody td.count-width .number{
-    padding-left: 2px;
+table.scroll tbody td.count-width > input{
+    /*margin-right: 20px;*/
+    width: 30px;
+    border: none;
+    /*cursor: pointer;*/
 }
 table.scroll thead th:last-child {
     width: 156px; /* 140px + 16px scrollbar width */
@@ -199,6 +218,9 @@ tbody td:last-child, thead th:last-child {
     overflow-x: hidden;
     border: 1px solid blueviolet;
 } */
+.delete-btn > a{
+    color: black;
+}
 .container .right .product-table tbody tr img{
     width: 100%;
     border-radius: 7px;
@@ -219,6 +241,7 @@ tbody td:last-child, thead th:last-child {
 }
 .total-number{
     font-weight: 700;
+    padding-bottom: 50px;
 }
 /*---------------------------------------------------------------*/
 .contac-section{

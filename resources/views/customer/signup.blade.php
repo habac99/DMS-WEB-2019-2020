@@ -9,7 +9,7 @@
 
 
 <form role="form" class="dangky-section" method="post">
-    <fieldset>
+    <field>
     <div class="dangky-form">
         <p>ACCOUNT - SIGN UP</p>
         <div class="text" >First name</div>
@@ -26,7 +26,7 @@
             <a href="dangnhap.html">Sign in</a>
         </div>
     </div>
-    </fieldset>
+    </field>
     {{csrf_field()}}
 </form>
 @endsection

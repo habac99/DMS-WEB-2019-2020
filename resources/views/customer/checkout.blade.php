@@ -107,6 +107,7 @@
                 <th class="des-width"></th>
                 <th class="count-width"></th>
                 <th class="price-width"></th>
+                <th class="price-width"></th>
                 <th class="delete-btn"></th>
                 </thead>
                 <tbody id="tbody-container">
@@ -123,7 +124,7 @@
                     </td>
                     <td class="price-width">${{$item->price}}</td>
                     <td class="price-width">${{$item->price * $item->qty }}</td>
-                   <td class="delete-btn"> <a  href="{{route('deleteCart',$item->rowId)}}"  ><i class="far fa-trash-alt" id="get-delete"></i> </a>  </td>
+                    <td class="delete-btn"><a  href="{{route('deleteCart',$item->rowId)}}" ><i class="far fa-trash-alt" id="get-delete"></i></a></td>
                 </tr>
                     @endforeach
                 </tbody>
@@ -145,7 +146,8 @@
         </div>
 
         @else
-            <h2> giỏ hàng rỗng </h2>
+            <div class="empty-cart"><p>Looks like your bag is empty.<br>Let's add a thing or two.</p></div>
+
         @endif
     </div>
 

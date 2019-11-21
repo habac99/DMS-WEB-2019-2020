@@ -38,6 +38,13 @@
     width: 100%;
     margin-bottom: 30px;
 }
+.dangky-section .dangky-form .forgot-password{
+    /*text-decoration: none;*/
+    color: black;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
 .input-black{
     border-bottom: 1px solid black;
 }

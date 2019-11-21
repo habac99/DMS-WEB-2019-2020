@@ -36,13 +36,16 @@
                 <div><a href="">{{Auth::User()->first_name}}</a></div>
             <div class="container-cart">
                 <a href="{{route('checkOut')}}" class="fas fa-shopping-cart cart" ></a>
-                <div class="count-cart">{{Cart::count()}} </div>
+                <span class="count-cart">{{Cart::count()}} </span>
             </div>
 
               <div><a href={{route('logout')}}>Log Out</a> </div>
             @else
                 <div><a href={{route('mLogin')}}>My account</a></div>
-                <a href="{{route('checkOut')}}" class="fas fa-shopping-cart cart" >{{Cart::count()}}</a>
+                <div class="container-cart">
+                    <a href="{{route('checkOut')}}" class="fas fa-shopping-cart cart" ></a>
+                    <span class="count-cart">{{Cart::count()}} </span>
+                </div>
 
             @endif
         </div>

@@ -69,14 +69,14 @@
                 <p class="header">CONTACT INFORMATION</p>
                 <div class="contact">
                     <div class="text">Email</div>
-                    <input type="email" class="contact-gmail">
+                    <input name="email" type="email" class="contact-gmail">
                 </div>
                 <p class="header">SHIPPING ADDRESS</p>
                 <div class="shipping-address">
                     <div class="name">
                         <div class="firstname-container">
                             <div class="text">First name</div>
-                            <input type="text" class="name-class">
+                            <input name="first_name" type="text" class="name-class">
                         </div>
                         <div class="lastname-container">
                             <div class="text">Last name</div>
@@ -85,7 +85,7 @@
                     </div>
                     <div class="address-container">
                         <div class="text">Address</div>
-                        <input type="text" class="address">
+                        <input name="address" type="text" class="address">
                     </div>
                     <div class="city-container">
                         <div class="text">City</div>
@@ -93,7 +93,7 @@
                     </div>
                     <div class="phone-container">
                         <div class="text">Phone</div>
-                        <input type="text">
+                        <input name="phone" type="text">
                     </div>
                     @endif
                     <a href="{{route('save')}}" ><button class="btn-submit-new" type="submit" name="subcribe">ACCEPT</button> </a>

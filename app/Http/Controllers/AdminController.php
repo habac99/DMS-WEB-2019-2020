@@ -46,6 +46,10 @@ class AdminController extends Controller
         return view('admin.orders',compact('order2'));
 
     }
+    public function postOrder(Request $req){
+
+
+    }
     public function postAddproduct(){
 
     }

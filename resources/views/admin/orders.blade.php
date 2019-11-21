@@ -34,7 +34,7 @@
                                 {{$order->product_list}}
                             </td>
                             <td>{{$order->total_payment}}</td>
-{{--                            <td>XS, S, M, L, XL, XXL, XXXL</td>--}}
+
                             <td class="btn-list">
                                 <a href="" class="change-btn modify">Edit</a>
                                 <a href="#" class="change-btn delete">Remove</a>

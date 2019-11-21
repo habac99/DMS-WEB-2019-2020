@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\bill;
+use App\customer;
 use App\product_detail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -15,7 +16,10 @@ class AdminController extends Controller
     }
     public function adminHome(){
         if(Auth::user()->level==1){
-            return view('admin.Home');
+            $user = customer::all();
+            $orders = bill::all();
+            $product = product_detail::all();
+            return view('admin.Home',compact('user','orders','product'));
         }
         else{
             return redirect()->intended('/');

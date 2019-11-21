@@ -19,7 +19,7 @@
     <div class="new-product">
         @foreach($new_product as $new_pr)
         <div class="img-new-product">
-            <a href={{route('one_product',$new_pr->product_name)}}><img src={{$new_pr->image}} alt=""></a>
+            <a href={{route('one_product',$new_pr->product_name)}}><img src="{{$new_pr->image}}" alt=""></a>
             <p>NEW RELEASE</p>
             <div class="title-img">
                 <a href={{route('one_product',$new_pr->product_name)}}>{{$new_pr->product_name}}</a>

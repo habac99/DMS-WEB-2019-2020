@@ -17,7 +17,7 @@
                 <div class="form-category">
                     @foreach($type as $pr_type)
                     <div>
-                        <input type="radio" name="category" value={{$pr_type->type_name}}>
+                        <input type="radio" name="category" value="{{$pr_type->type_name}}">
                         <p>{{$pr_type->type_name}}</p>
                     </div>
                         @endforeach

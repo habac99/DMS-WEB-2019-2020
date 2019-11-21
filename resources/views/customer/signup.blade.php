@@ -9,7 +9,7 @@
 
 
 <form role="form" class="dangky-section" method="post">
-    <field>
+
     <div class="dangky-form">
         <p>ACCOUNT - SIGN UP</p>
         <div class="text" >First name</div>
@@ -23,10 +23,10 @@
         <button class="btn-submit" type="submit" name="subcribe">SIGN UP</button>
         <div class="account-alr">
             <span>Already have an account?</span>
-            <a href="dangnhap.html">Sign in</a>
+            <a href="{{route('mLogin')}}">Sign in</a>
         </div>
     </div>
-    </field>
+
     {{csrf_field()}}
 </form>
 @endsection

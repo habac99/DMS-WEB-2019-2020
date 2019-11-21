@@ -7,42 +7,43 @@
     <div class="name-content">Sản phẩm</div>
     <div class="panel-heading">
         <div class="name-panel">Sửa sản phẩm</div>
-        <form action="">
+        <form method="post">
+            {{csrf_field()}}
             <div class="form-group">
-                <p>Tên sản phẩm</p>
-                <input placeholder="{{$product_edit[0]->product_id}}" type="text">
+                <p>Product name</p>
+                <input name="pr_name" value="{{$product_edit[0]->product_name}}" type="text">
             </div>
             <div class="form-group">
-                <p>Giá sản phẩm</p>
-                <input type="number">
+                <p>Price</p>
+                <input type="number" name="price" value="{{$product_edit[0]->unit_price}}">
             </div>
 
             <div class="form-group">
-                <p>Ảnh sản phẩm</p>
-                <input type="file" id="file-input" name="file[]" multiple>
+                <p>Product images</p>
+                <input type="file" id="file-input" name="img[]" multiple>
                 <div id="preview">
-                    <img src={{asset($product_edit[0]->image1)}} alt="">
-                    <img src={{asset($product_edit[0]->image2)}}  alt="">
-                    <img src={{asset($product_edit[0]->image3)}}  alt="">
-                    <img src={{asset($product_edit[0]->image4)}} alt="">
-                    <img src={{asset($product_edit[0]->image5)}}  alt="">
+                    <img src="{{asset($product_edit[0]->image1)}}" alt="">
+                    <img src="{{asset($product_edit[0]->image2)}} " alt="">
+                    <img src="{{asset($product_edit[0]->image3)}} " alt="">
+                    <img src="{{asset($product_edit[0]->image4)}}" alt="">
+                    <img src="{{asset($product_edit[0]->image5)}} " alt="">
                 </div>
             </div>
             <div class="form-group">
-                <p>Màu sản phẩm</p>
-                <input type="text">
+                <p>Product color</p>
+                <input type="text" name="color" value="{{$product_edit[0]->color}}">
             </div>
             <div class="form-group">
-                <p>Size sản phẩm</p>
-                <input type="text">
+                <p>Size</p>
+                <input name="size" type="text">
             </div>
             <div class="form-group">
-                <p>Miêu tả</p>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <p>Description</p>
+                <textarea name="description" placeholder="{{$product_edit[0]->description}}" id="" cols="30" rows="10" ></textarea>
             </div>
             <div class="form-group" id="last">
-                <input type="submit" value="Sửa">
-                <a href={{route('adminProduct')}}>Hủy bỏ</a>
+                <button type="submit" value="Sửa">Update</button>
+                <a href={{route('adminProduct')}}>Cancel</a>
             </div>
         </form>
     </div>

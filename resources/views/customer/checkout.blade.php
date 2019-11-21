@@ -22,7 +22,7 @@
         }
     </script>
 
-    <div class="container">
+
         @if(Cart::count()>0)
         <div class="left">
             <p>s l m p l e</p>
@@ -149,7 +149,7 @@
             <div class="empty-cart"><p>Looks like your bag is empty.<br>Let's add a thing or two.</p></div>
 
         @endif
-    </div>
+
 
     @endsection
 

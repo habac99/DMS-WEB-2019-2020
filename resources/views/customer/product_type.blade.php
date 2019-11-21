@@ -28,7 +28,7 @@
                             36 37 38 39 40</div>
                     </div>
                     <div class="btn-shop-now">
-                        <a href="{{route('one_product',[$pr_list->product_name,'black'])}}">SHOP NOW</a>
+                        <a href="{{route('one_product',[$pr_list->product_name])}}">SHOP NOW</a>
                     </div>
 
                 </div>

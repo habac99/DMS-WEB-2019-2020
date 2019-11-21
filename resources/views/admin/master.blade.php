@@ -33,19 +33,19 @@
                 <li class="active">
                     <a href={{route('adminHome')}}>
                         <i class="fas fa-home"></i>
-                        <p>Trang chủ</p>
+                        <p>Home</p>
                     </a>
                 </li>
                 <li>
                     <a href={{route('adminProduct')}}>
                         <i class="far fa-calendar-alt"></i>
-                        <p>Sản phẩm</p>
+                        <p>Products</p>
                     </a>
                 </li>
                 <li>
                     <a href={{route('getOrder')}}>
                         <i class="far fa-calendar-check"></i>
-                        <p>Đơn hàng</p>
+                        <p>Orders</p>
                     </a>
                 </li>
             </ul>

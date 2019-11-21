@@ -14,7 +14,7 @@
         @foreach($all_products as $each_pr)
         <div class="img-bestseller-product" id="{{$each_pr->product_id}}">
             <div class="image-block">
-                <a href={{route('one_product',$each_pr->product_name)}}><img src={{$each_pr->image}} alt="" class="layer1"></a>
+                <a href={{route('one_product',$each_pr->product_name)}}><img src="{{$each_pr->image}}" alt="" class="layer1"></a>
                 <div class="white"></div>
                 <div class="size-section">
                     <div class="size">AVAILABLE SIZE</div>
@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="title-img">
-                <a href={{route('one_product',$each_pr->product_name)}}>{{$each_pr->product_name}}</a>
+                <a href={{route('one_product',$each_pr->product_name)}}>"{{$each_pr->product_name}}"</a>
                 <div class="cost">
                     <p>${{$each_pr->unit_price}}</p>
                 </div>

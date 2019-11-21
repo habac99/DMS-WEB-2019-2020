@@ -1,5 +1,5 @@
 @extends('admin.master')
-
+<link rel="stylesheet" href="/css/order.css">
 @section('title')
     Orders
 @endsection
@@ -10,7 +10,7 @@
             <div class="name-panel">Order List</div>
             <div class="panel-body">
 {{--                <a href={{route('addProduct')}} class="add-btn">Add Product</a>--}}
-                <table class="main-table">
+                <table class="main-table orderadmin">
                     <thead>
                     <tr class="name-category">
                         <th class="id">ID</th>
@@ -26,7 +26,7 @@
                     </thead>
                     <tbody>
                     @foreach($order2 as $order)
-                        <tr>
+                        <tr class="adminorder">
                             <td class="id">{{$order->bill_id}}</td>
                             <td>{{$order->shipTo}}</td>
                             <td>{{$order->email}}</td>
@@ -36,8 +36,8 @@
                             <td>{{$order->total_payment}}</td>
 {{--                            <td>XS, S, M, L, XL, XXL, XXXL</td>--}}
                             <td class="btn-list">
-                                <a href="" class="change-btn modify">Edit</a>
-                                <a href="#" class="change-btn delete">Remove</a>
+                                <a href="" class="acept-btn">Confirm</a>
+
                             </td>
                         </tr>
                     @endforeach

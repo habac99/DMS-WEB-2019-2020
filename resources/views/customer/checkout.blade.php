@@ -69,7 +69,7 @@
                 <p class="header">CONTACT INFORMATION</p>
                 <div class="contact">
                     <div class="text">Email</div>
-                    <input type="email" class="contact-gmail">
+                    <input type="email" class="contact-gmail" name="email">
                 </div>
                 <p class="header">SHIPPING ADDRESS</p>
                 <div class="shipping-address">
@@ -85,7 +85,7 @@
                     </div>
                     <div class="address-container">
                         <div class="text">Address</div>
-                        <input type="text" class="address">
+                        <input type="text" class="address" name="address">
                     </div>
                     <div class="city-container">
                         <div class="text">City</div>
@@ -152,7 +152,8 @@
 
 
         @else
-            <h2> giỏ hàng rỗng </h2>
+            <div class="content-checkout">Looks like your bag is empty.<br>
+                Let's add a thing or two.</div>
         @endif
 
 

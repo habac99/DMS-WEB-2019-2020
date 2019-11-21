@@ -356,3 +356,11 @@ tbody td:last-child, thead th:last-child {
 .contac-section .contact-banner .right-contact .input-section .btn-submit:hover{
     background-color: rgb(139, 133, 133);
 }
+.content-checkout{
+    text-align: center;
+    display: block;
+    width: 93%;
+    font-size: 20px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}

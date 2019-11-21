@@ -28,21 +28,21 @@
         </div>
     </div>
     <div class="container">
-        <div class="left-menu">
+        <div class="left-menu" id="left-menu-admin">
             <ul>
-                <li class="active">
+                <li class="active" id="indexadmin">
                     <a href={{route('adminHome')}}>
                         <i class="fas fa-home"></i>
                         <p>Home</p>
                     </a>
                 </li>
-                <li>
+                <li id="productadmin">
                     <a href={{route('adminProduct')}}>
                         <i class="far fa-calendar-alt"></i>
                         <p>Products</p>
                     </a>
                 </li>
-                <li>
+                <li id="orderadmin">
                     <a href={{route('getOrder')}}>
                         <i class="far fa-calendar-check"></i>
                         <p>Orders</p>
@@ -56,6 +56,7 @@
 {{--        @yield('content')--}}
 
     <script src="/js/mainAdmin.js"></script>
+    <script src="/js/admin.js"></script>
 </body>
 </html>
 

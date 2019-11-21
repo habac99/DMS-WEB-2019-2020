@@ -1,5 +1,5 @@
 @extends('master')
-<link rel="stylesheet" href="/css/bootstrap.min.css">
+{{--<link rel="stylesheet" href="/css/bootstrap.min.css">--}}
 @section('title')
     All Products
 @endsection
@@ -25,12 +25,12 @@
                 </div>
             </div>
             <div class="title-img">
-                <a href={{route('one_product',$each_pr->product_name)}}>"{{$each_pr->product_name}}"</a>
+                <a href={{route('one_product',$each_pr->product_name)}}>{{$each_pr->product_name}}</a>
                 <div class="cost">
                     <p>${{$each_pr->unit_price}}</p>
                 </div>
             </div>
-            <div class="information">GREEN/BLACK</div>
+            <div class="information"></div>
         </div>
             @endforeach
     </div>

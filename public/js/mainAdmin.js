@@ -31,3 +31,4 @@ function previewImages() {
   }
 
   document.querySelector('#file-input').addEventListener("change", previewImages);
+

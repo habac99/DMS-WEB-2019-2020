@@ -155,3 +155,63 @@
     margin-top: 80px;
     margin-bottom: 95px;
 }
+
+/*----------------------------------COLOR----------------------------------------*/
+.show-container .show-section .img-infor .select-color{
+    margin-top: 50px;
+}
+.show-container .show-section .img-infor .select-color .custom-input-color{
+    opacity: 1;
+    display: inline-block;
+    position: relative;
+    border: 1px solid rgb(136, 136, 136);
+    margin-right: 0px;
+    /* border: 1px solid red; */
+}
+.black{
+    width: 50px;
+    height: 50px;
+    /*background-color: black;*/
+}
+.blue{
+    width: 50px;
+    height: 50px;
+    /*background-color: blue;*/
+}
+/*.xl{*/
+/*    width: 40px;*/
+/*    height: 40px;*/
+/*}*/
+/*.xxl{*/
+/*    width: 50px;*/
+/*    height: 40px;*/
+/*}*/
+/*.xxxl{*/
+/*    width: 60px;*/
+/*    height: 40px;*/
+/*}*/
+.show-container .show-section .img-infor .select-color .custom-input-color input[type=radio]{
+    visibility: hidden;
+    width: 30px;
+    height: 30px;
+}
+.show-container .show-section .img-infor .select-color .custom-input-color label{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.show-container .show-section .img-infor .select-color .custom-input-color input[type=radio]:checked ~ label{
+    color: white;
+    background-color: black;
+}
+/*.show-container .show-section .img-infor .select-color .custom-color input[type=radio]:checked ~ label{*/
+/*    color: white;*/
+/*    background-color: black;*/
+/*}*/

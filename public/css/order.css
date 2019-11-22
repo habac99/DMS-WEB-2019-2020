@@ -1,4 +1,28 @@
-.main-table.orderadmin tbody tr td{
-    height: 100px;
+.main-table.orderadmin > tbody tr td{
+    /*height: 100px;*/
     /*display: block;*/
 }
+.main-table.orderadmin  tbody tr td table tr#tr-small{
+    height: 50px;
+    /*display: block;*/
+}
+.main-table.orderadmin  tbody tr td table tr#tr-small #soluong{
+    width: 50px;
+}
+.main-table.orderadmin tbody .adminorder img-list .table-small.needed tr{
+    /*border: 1px solid red;*/
+}
+.main-table.orderadmin tbody .adminorder .shipto{
+    width: 200px;
+}
+.main-table.orderadmin tbody .adminorder .email{
+    width: 50px;
+}
+.main-table.orderadmin tbody .adminorder .total-payment{
+    width: 50px;
+}
+.main-table.orderadmin tbody .adminorder .btn-list{
+    width: 50px;
+}
+
+

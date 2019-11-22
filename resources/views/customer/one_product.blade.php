@@ -70,9 +70,40 @@
                     <label for="XXL" class="three-size">XXL</label>
                     <div class="check"></div>
                 </div>
-
-
             </div>
+            <div class="select-size">
+                <div class="custom-input x">
+                    <input type="radio" id="XS" name="size" value="">
+                    <label for="XS" class="two-size">XS</label>
+                    <div class="check"></div>
+                </div>
+                <div class="custom-input x">
+                    <input type="radio" id="S" name="size" value="">
+                    <label for="S" class="s-size">S</label>
+                    <div class="check"></div>
+                </div>
+                <div class="custom-input x">
+                    <input type="radio" id="M" name="size" value="">
+                    <label for="M" class="m-size">M</label>
+                    <div class="check"></div>
+                </div>
+                <div class="custom-input x">
+                    <input type="radio" id="L" name="size" value="">
+                    <label for="L" class="l-size">L</label>
+                    <div class="check"></div>
+                </div>
+                <div class="custom-input x">
+                    <input type="radio" id="L" name="size" value="">
+                    <label for="L" class="l-size">L</label>
+                    <div class="check"></div>
+                </div>
+                <div class="custom-input x">
+                    <input type="radio" id="L" name="size" value="">
+                    <label for="L" class="l-size">L</label>
+                    <div class="check"></div>
+                </div>
+            </div>
+
             <a href="{{route('addCart',[$details[0]->product_id,$details[0]->color])}}"><button id="buttonAdd"  type="button" >ADD TO BAG</button></a>
             <div class="information">
                 <p class="des">

@@ -364,3 +364,10 @@ tbody td:last-child, thead th:last-child {
     margin-top: 200px;
     margin-bottom: 200px;
 }
+.empty-checkout{
+    margin-top: 190px;
+    width: 90%;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 190px;
+}

@@ -28,12 +28,30 @@
                     @foreach($order2 as $order)
                         <tr class="adminorder">
                             <td class="id">{{$order->bill_id}}</td>
-                            <td>{{$order->shipTo}}</td>
-                            <td>{{$order->email}}</td>
+                            <td class="shipto">{{$order->shipTo}}</td>
+                            <td class="email">{{$order->email}}</td>
                             <td class="img-list">
-                                {{$order->product_list}}
+                                <table class="table-small .needed">
+                                    <tr id="tr-small">
+                                        <td>Product 1</td>
+                                        <td id="soluong">1</td>
+                                    </tr>
+                                    <tr id="tr-small">
+                                        <td>Product 2</td>
+                                        <td id="soluong">1</td>
+                                    </tr>
+                                    <tr id="tr-small">
+                                        <td>Product 3</td>
+                                        <td id="soluong">1</td>
+                                    </tr>
+                                    <tr id="tr-small">
+                                        <td>Product 4</td>
+                                        <td id="soluong">1</td>
+                                    </tr>
+                                </table>
+{{--                                {{$order->product_list}}--}}
                             </td>
-                            <td>{{$order->total_payment}}</td>
+                            <td class="total-payment">{{$order->total_payment}}</td>
 
                             <td class="btn-list">
                                 <a href="" class="acept-btn">Confirm</a>

@@ -10,6 +10,7 @@
             <div class="name-panel">Product list</div>
             <div class="panel-body">
                 <a href={{route('addProduct')}} class="add-btn">Add Product</a>
+                <div class="margin-div"></div>
                 <table class="main-table">
                     <thead>
                     <tr class="name-category">

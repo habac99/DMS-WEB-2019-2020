@@ -36,13 +36,17 @@
             <input type="text" required name="keyword" class="form-control" placeholder="Search product" />
             </form>
             @if(Auth::check() )
-                <div><a href="">{{Auth::User()->first_name}}</a></div>
+                <a id="name-user" href="">{{Auth::User()->first_name}}</a>
+                <div class="newest-layer">
+{{--                    <a href="">{{Auth::User()->first_name}}</a>--}}
+                    <a href={{route('logout')}}>Log Out</a>
+                </div>
             <div class="container-cart">
                 <a href="{{route('checkOut')}}" class="fas fa-shopping-cart cart" ></a>
                 <span class="count-cart">{{Cart::count()}} </span>
             </div>
 
-              <div><a href={{route('logout')}}>Log Out</a> </div>
+{{--              <div><a href={{route('logout')}}>Log Out</a> </div>--}}
             @else
                 <div><a href={{route('mLogin')}}>My account</a></div>
                 <div class="container-cart">

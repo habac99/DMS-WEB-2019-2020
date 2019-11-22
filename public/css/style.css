@@ -84,6 +84,9 @@ div{
 .header-menu .main-menu .left-menu .menu-layer1 .menu-layer2.show{
     visibility: visible;
     opacity: 1;
+    border-right: 1px solid #8c8c8c;
+    border-bottom: 1px solid #8c8c8c;
+    border-left: 1px solid #8c8c8c;
 }
 .header-menu .left-menu .menu-layer1 .menu-layer2 ul{
     display: flex;
@@ -947,4 +950,31 @@ div{
 
 .user-menu a:hover, .user-menu a:focus {
     text-decoration: none;
+}
+.right-menu > a{
+    text-decoration: none;
+    color: black;
+}
+.newest-layer {
+    position: relative;
+}
+.newest-layer{
+    position: absolute;
+    right: 109px;
+    top: 60px;
+    width: 100px;
+    background-color: white;
+    z-index: 2;
+    padding-top: 15px;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-right: 1px solid #8c8c8c;
+    border-bottom: 1px solid #8c8c8c;
+    border-left: 1px solid #8c8c8c;
+    /*visibility: hidden;*/
+    /*opacity: 0;*/
+}
+.right-menu #name-user:hover .newest-layer{
+    opacity: 1;
+    visibility: visible;
 }

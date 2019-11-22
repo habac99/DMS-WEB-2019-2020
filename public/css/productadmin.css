@@ -39,12 +39,16 @@
 }
 
 table {
-    margin-top: 25px;
+    /*margin-top: 25px;*/
     /* background: #fff; */
     border-collapse: collapse;
     width: 100%;
     counter-reset: tableCount;
     /* border: 1px solid red; */
+}
+.margin-div{
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 table>thead>tr>th {
 	vertical-align: middle;

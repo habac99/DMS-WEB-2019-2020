@@ -39,61 +39,61 @@
                     <p class="header">CONTACT INFORMATION</p>
                     <div class="contact">
                         <div class="text">Email</div>
-                        <input type="email" name="email" class="contact-gmail" value="{{Auth::User()->email}}">
+                        <input required type="email" name="email" class="contact-gmail" value="{{Auth::User()->email}}">
                     </div>
                     <p class="header">SHIPPING ADDRESS</p>
                     <div class="shipping-address">
                         <div class="name">
                             <div class="firstname-container">
                                 <div class="text">First name</div>
-                                <input type="text" class="name-class" value={{Auth::User()->first_name}}>
+                                <input required type="text" class="name-class" value={{Auth::User()->first_name}}>
                             </div>
                             <div class="lastname-container">
                                 <div class="text">Last name</div>
-                                <input type="text" class="name-class" value={{Auth::User()->last_name}}>
+                                <input required type="text" class="name-class" value={{Auth::User()->last_name}}>
                             </div>
                         </div>
                         <div class="address-container">
                             <div class="text">Address</div>
-                            <input type="text"name="address" class="address" value="{{Auth::User()->address}}" >
+                            <input required type="text"name="address" class="address" value="{{Auth::User()->address}}" >
                         </div>
-                        <div class="city-container">
-                            <div class="text">City</div>
-                            <input type="text" class="address">
-                        </div>
+{{--                        <div class="city-container">--}}
+{{--                            <div class="text">City</div>--}}
+{{--                            <input type="text" class="address">--}}
+{{--                        </div>--}}
                         <div class="phone-container">
                             <div class="text">Phone</div>
-                            <input type="text" value="{{Auth::User()->phone_number}}" >
+                            <input required type="text" value="{{Auth::User()->phone_number}}" >
                         </div>
                 @else
                 <p class="header">CONTACT INFORMATION</p>
                 <div class="contact">
                     <div class="text">Email</div>
-                    <input name="email" type="email" class="contact-gmail">
+                    <input required name="email" type="email" class="contact-gmail">
                 </div>
                 <p class="header">SHIPPING ADDRESS</p>
                 <div class="shipping-address">
                     <div class="name">
                         <div class="firstname-container">
                             <div class="text">First name</div>
-                            <input name="first_name" type="text" class="name-class">
+                            <input required name="first_name" type="text" class="name-class">
                         </div>
                         <div class="lastname-container">
                             <div class="text">Last name</div>
-                            <input type="text" class="name-class">
+                            <input required type="text" class="name-class">
                         </div>
                     </div>
                     <div class="address-container">
                         <div class="text">Address</div>
-                        <input name="address" type="text" class="address">
+                        <input required name="address" type="text" class="address">
                     </div>
                     <div class="city-container">
                         <div class="text">City</div>
-                        <input type="text" class="address">
+                        <input required  type="text" class="address">
                     </div>
                     <div class="phone-container">
                         <div class="text">Phone</div>
-                        <input name="phone" type="text">
+                        <input required name="phone" type="text">
                     </div>
                     @endif
                     <a href="{{route('save')}}" ><button class="btn-submit-new" type="submit" name="subcribe">ACCEPT</button> </a>
@@ -119,6 +119,8 @@
                             <td class="des-width">
                                 <div>{{$item->name}}</div>
                                 <div>{{$item->options->color}}</div>
+                                <div>{{$item->options->size}}</div>
+
                             </td>
                             <td class="count-width">
                                 <input type="number" value="{{$item->qty}}" onchange="updateCart(this.value,'{{$item->rowId}}')">

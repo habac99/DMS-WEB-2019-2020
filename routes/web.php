@@ -37,8 +37,11 @@ Route::get('/test', 'TestController@index');
 Route::get('test/search', 'TestController@search');
 route::get('/search','SearchController@search')->name('search');
 
+Route::group(['prefix'=>'product'],function(){
+    route::get('/{product_name}/{color?}', 'CustomerController@product_color')->name('one_product');
+//    route::post('/{product_name}/{color?}', 'CartController@postAddCart')->name('postAddCart');
+});
 
-route::get('/product/{product_name}/{color?}', 'CustomerController@product_color')->name('one_product');
 //    route::get(','CustomerController@product_color')->name('pr_color');
 //}
 
@@ -54,6 +57,7 @@ Route::group(['prefix'=>"signup",'middleware'=>'checkLogin'],function (){
 Route::group(['prefix'=>'Admin','middleware'=>'checkLogout'],function (){
     Route::get('/','AdminController@adminHome')->name('adminHome');
     Route::get('/order','AdminController@getOrder')->name('getOrder');
+    Route::get('/order/{id}','AdminController@confirmOrder')->name('confirm');
     Route::group(['prefix'=>'product'],function (){
         Route::get('/', 'ProductController@all_product')->name('adminProduct');
 
@@ -71,7 +75,9 @@ Route::get('/logout','CustomerController@getLogout')->name('logout');
 
 //Auth::routes();
 Route::group(['prefix'=>'Cart'], function (){
-    Route::get('/add/{id}', 'CartController@addCart')->name('addCart');
+    Route::get('/add/{id}/{color?}', 'CartController@addCart')->name('addCart');
+//    Route::get('/add/{id}/{color?}', 'CartController@addCart')->name('postAddCart');
+//    Route::post('/add/{id}/{color?}','CartController@postAddCart')->name('postAddCart');
     Route::get('/preCheck-out', 'CartController@checkOut')->name('checkOut');
     Route::get('/delete/{id}','CartController@deleteCart')->name('deleteCart');
     Route::get('/update','CartController@updateCart')->name('updateCart');

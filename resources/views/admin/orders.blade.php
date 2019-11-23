@@ -25,36 +25,30 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach($order2 as $order)
+                    @foreach($orders as $order)
                         <tr class="adminorder">
                             <td class="id">{{$order->bill_id}}</td>
                             <td class="shipto">{{$order->shipTo}}</td>
                             <td class="email">{{$order->email}}</td>
                             <td class="img-list">
                                 <table class="table-small .needed">
+                                    @foreach($details as $detail)
+                                        @if($detail->bill_id == $order->bill_id)
                                     <tr id="tr-small">
-                                        <td>Product 1</td>
-                                        <td id="soluong">1</td>
+                                        <td>{{$detail->product_name}}</td>
+                                        <td>{{$detail->more_info}}</td>
+                                        <td id="soluong">{{$detail->quantity}}</td>
                                     </tr>
-                                    <tr id="tr-small">
-                                        <td>Product 2</td>
-                                        <td id="soluong">1</td>
-                                    </tr>
-                                    <tr id="tr-small">
-                                        <td>Product 3</td>
-                                        <td id="soluong">1</td>
-                                    </tr>
-                                    <tr id="tr-small">
-                                        <td>Product 4</td>
-                                        <td id="soluong">1</td>
-                                    </tr>
+                                        @endif
+                                        @endforeach
+
                                 </table>
 {{--                                {{$order->product_list}}--}}
                             </td>
                             <td class="total-payment">{{$order->total_payment}}</td>
 
                             <td class="btn-list">
-                                <a href="" class="acept-btn">Confirm</a>
+                                <a href="{{route('confirm',$order->bill_id)}}" class="acept-btn">Confirm</a>
 
                             </td>
                         </tr>

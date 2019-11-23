@@ -43,7 +43,7 @@
                 </div>
             <div class="container-cart">
                 <a href="{{route('checkOut')}}" class="fas fa-shopping-cart cart" ></a>
-                <span class="count-cart">{{Cart::count()}} </span>
+                <span class="count-cart">{{Cart::instance(Auth::User()->customer_id)->content()->groupBy('rowId')->count()}} </span>
             </div>
 
 {{--              <div><a href={{route('logout')}}>Log Out</a> </div>--}}
@@ -51,7 +51,7 @@
                 <div><a href={{route('mLogin')}}>My account</a></div>
                 <div class="container-cart">
                     <a href="{{route('checkOut')}}" class="fas fa-shopping-cart cart" ></a>
-                    <span class="count-cart">{{Cart::count()}} </span>
+                    <span class="count-cart">{{Cart::instance('guest')->content()->groupBy('rowId')->count()}} </span>
                 </div>
 
             @endif
@@ -59,31 +59,5 @@
         </div>
 
     </div>
-{{--    <div class="side-cart">--}}
-{{--        <div class="black-screen"></div>--}}
-{{--        <div class="content-cart">--}}
-{{--            <div class="content">--}}
-{{--                <p>BAG</p>--}}
-{{--                <p class="close">CLOSE</p>--}}
-{{--            </div>--}}
-{{--            <div class="main-content" id="cart_info">--}}
-
-
-
-
-
-
-{{--            </div>--}}
-{{--            <div class="check-out">--}}
-{{--                <div class="content-check-out">--}}
-{{--                    <div class="sumtotal-money">--}}
-{{--                        <p>SUMTOTAL(0 item)</p>--}}
-{{--                        <p class="money">0$</p>--}}
-{{--                    </div>--}}
-{{--                    <a href="#">CHECK OUT</a>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
 </div>
 

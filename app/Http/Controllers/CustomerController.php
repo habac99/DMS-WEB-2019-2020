@@ -43,13 +43,19 @@ class CustomerController extends Controller
     public function product_type (Request $req){
 
 
-        $type_name = $req->type_name;
-        $product_type = $this->product_type;
+        $data['type_name'] = $req->type_name;
+
+        $data['product_type'] = $this->product_type;
 //       $product_list2 = DB::table('product_details')
 //                                 ->join()
-        $product_list =  DB::table('products')->where('type_name', $type_name)->get();
+        $data['product_list2'] = DB::table('product_details')
+                                           ->join('products','product_details.product_id','=', 'products.product_id')
+                                           ->select('product_details.*','products.product_name','products.unit_price')
+                                           ->where('products.type_name',$req->type_name)
+                                            ->orderBy('products.product_name')->get();
+//        $product_list =  DB::table('products')->where('type_name', $type_name)->get();
 
-        return view('customer.product_type', compact('type_name','product_type','product_list'));
+        return view('customer.product_type', $data);
 
 
     }
@@ -73,22 +79,27 @@ class CustomerController extends Controller
 //    }
     public function product_color(Request $req)
     {
-        $name = $req->product_name;
+        $data['name'] = $req->product_name;
         $query = DB::table('products')->where('product_name', $req->product_name)->get();
         $id = $query[0]->product_id;
+        $data['colors'] = product_detail::select('color')->where('product_id',$id)->get();
+        $color = strtolower($req->color);
+
         if ($req->color) {
-            $details = DB::table('product_details')->join('products','product_details.product_id','=','products.product_id')
+            $data['details'] = DB::table('product_details')->join('products','product_details.product_id','=','products.product_id')
                                                          ->select('product_details.*','products.unit_price')
-                                                         ->where('product_details.product_id', $id)->where('product_details.color', $req->color)->get();
+                                                         ->where('product_details.product_id', $id)->where('product_details.color', $color)->get();
         }else{
-            $details = DB::table('product_details')->join('products','product_details.product_id','=','products.product_id')
+            $data['details'] = DB::table('product_details')->join('products','product_details.product_id','=','products.product_id')
                                                          ->select('product_details.*','products.unit_price')
                                                          ->where('product_details.product_id',$id)->limit(1)->get();
 
         }
-        $product_type = $this->product_type;
+        $data['product_type'] = $this->product_type;
         return response()
-            -> view('customer.one_product', compact('name','details','product_type'));
+            -> view('customer.one_product', $data);
+
+
 
 
     }
@@ -107,7 +118,8 @@ class CustomerController extends Controller
 
     }
     public function postLogin(Request $req){
-        if(Auth::attempt(['email'=>$req->email, 'password'=>$req->password])) {
+        $remember= true;
+        if(Auth::attempt(['email'=>$req->email, 'password'=>$req->password],$remember)) {
             if (Auth::User()->level == 1) {
                 return redirect()->intended('/Admin');
 

@@ -15,11 +15,11 @@
     <div class="product-section">
 
         <div class="product">
-            @foreach($product_list as $pr_list)
+            @foreach($product_list2 as $pr_list)
 
             <div class="img-bestseller-product">
                 <div class="image-block">
-                    <a href="#"><img src="{{asset($pr_list->image)}}" alt="" class="layer1"></a>
+                    <a href="#"><img src="{{asset($pr_list->image1)}}" alt="" class="layer1"></a>
                     <div class="white"></div>
                     <div class="size-section">
                         <div class="size">AVAILABLE SIZE</div>
@@ -28,7 +28,7 @@
                             36 37 38 39 40</div>
                     </div>
                     <div class="btn-shop-now">
-                        <a href="{{route('one_product',[$pr_list->product_name])}}">SHOP NOW</a>
+                        <a href="{{route('one_product',[$pr_list->product_name,$pr_list->color])}}">SHOP NOW</a>
                     </div>
 
                 </div>
@@ -38,7 +38,7 @@
                         <p>{{$pr_list->unit_price}}</p>
                     </div>
                 </div>
-                <div class="information">BLACK</div>
+                <div class="information">{{ucfirst($pr_list->color)}}</div>
             </div>
             @endforeach
 

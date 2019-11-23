@@ -35,18 +35,46 @@ class AdminController extends Controller
 //    }
 
     public function getOrder(){
-        $orders= bill::where('isConfirm',0)->get();
-        $order2 = DB::table('bill_details')->join('bills','bill_details.bill_id','=','bills.bill_id')
-                                          ->join('products','bill_details.product_id','=','products.product_id')
-                                          ->select('bill_details.*','products.product_name',DB::raw('group_concat(products.product_name) as product_list'),
-                                                    'bills.email','bills.total_payment','bills.shipTo')
-                                          ->where('bills.isConfirm',0)
-                                          ->groupBy('bill_details.bill_id')
-                                          ->get();
-        return view('admin.orders',compact('order2'));
+        $data['orders']= bill::where('isConfirm',0)->get();
+//        $idList = bill::select('bill_id')->where('isConfirm',0)->get();
+//        $idList = $idList->toArray();
+//        $i =',';
 
+
+//        $list = DB::table('bill_details')->join('product','bill_details.product_id','=','products.product_id')
+
+
+
+
+//        $data['orders'] = DB::table('bill_details')->join('bills','bill_details.bill_id','=','bills.bill_id')
+//                                          ->join('products','bill_details.product_id','=','products.product_id')
+//                                          ->select('bill_details.*','products.product_name',
+//                                                    DB::raw('group_concat(products.product_name) as product_list'),
+//                                                    'bills.email','bills.total_payment','bills.shipTo')
+//                                          ->where('bills.isConfirm',0)
+//                                          ->groupBy('bill_details.bill_id')
+//                                          ->get();
+
+        $data['details'] =DB::table('bill_details')->join('bills','bill_details.bill_id','=','bills.bill_id')
+                                                                ->join('products','bill_details.product_id','=','products.product_id')
+                                                                ->select('bill_details.*','products.product_name',
+                                                                    'bill_details.more_info'  , 'bill_details.quantity'
+                                                                    )
+                                                                ->where('bills.isConfirm',0)
+//                                                                ->groupBy('bill_details.bill_id')
+                                                                ->get();
+
+
+
+
+//            dd($tes2[15]->order_detail);
+        return view('admin.orders',$data);
     }
-    public function postOrder(Request $req){
+    public function confirmOrder(Request $req){
+        $order = bill::find($req->id);
+        $order ->isConfirm = 1;
+        $order->save();
+        return back();
 
 
     }

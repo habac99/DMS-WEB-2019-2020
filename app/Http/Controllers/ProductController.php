@@ -102,23 +102,25 @@ class ProductController extends Controller
     public function postEditProduct( Request $req){
         $product = new product;
         $product_details = new product_detail;
-        if($req->hasFile('img')) {
-            $photos = $req->file('img');
-//            $image = 'storage/img/' .$req->category .'/'. $photos[0]->getClientOriginalName();
-
-            $image = 'storage/img/' .'/'. $photos[0]->getClientOriginalName();
-            $product::where('product_id', $req->id)->update(['product_name' => $req->pr_name,
+//        if($req->hasFile('img')) {
+//            $photos = $req->file('img');
+////            $image = 'storage/img/' .$req->category .'/'. $photos[0]->getClientOriginalName();
+//
+//            $image = 'storage/img/' .'/'. $photos[0]->getClientOriginalName();
+            $product::where('product_id', $req->id)->update(['product_name' => strtoupper($req->pr_name),
                                                             'description' => $req->description,
-                                                            'unit_price' => $req->price,
-                                                            ''
+                                                            'unit_price' => $req->price
+
 
             ]);
-            $product_details::where('product_id', $req->id)->where('color', $req->color)->update();
+            $product_details::where('product_id', $req->id)->where('color', $req->color)->update(['instock'=>$req->instock]);
+        return back();
         }
 
 
 
-    }
+
+
     public function deleteProduct(Request $req){
 
         $count   = DB::table('product_details')->where('product_id', $req->id)->get();

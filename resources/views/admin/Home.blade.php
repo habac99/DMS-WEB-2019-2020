@@ -28,7 +28,7 @@
                 <i class="far fa-check-square" id="purple"></i>
                 <div class="information">
                     <div class="number">{{count($orders)}}</div>
-                    <div class="name">Orders</div>
+                    <div class="name">New Orders</div>
                 </div>
             </div>
         </div>

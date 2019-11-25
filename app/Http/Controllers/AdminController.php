@@ -17,10 +17,10 @@ class AdminController extends Controller
     }
     public function adminHome(){
         if(Auth::user()->level==1){
-            $user = customer::all();
-            $orders = bill::all();
-            $product = product_detail::all();
-            return view('admin.Home',compact('user','orders','product'));
+            $data['user'] = customer::all();
+            $data['orders']= bill::where('isConfirm',0)->get();
+            $data['product'] = product_detail::all();
+            return view('admin.Home',$data);
         }
         else{
             return redirect()->intended('/');

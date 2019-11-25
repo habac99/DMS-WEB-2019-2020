@@ -29,13 +29,13 @@
 {{--                    <img src="{{asset($product_edit[0]->image5)}} " alt="">--}}
 {{--                </div>--}}
 {{--            </div>--}}
-{{--            <div class="form-group">--}}
+            <div class="form-group">
                 <p>Product color</p>
                 <input type="text" name="color" value="{{$product_edit[0]->color}}">
             </div>
             <div class="form-group">
                 <p>In Stock</p>
-                <input name="size" type="text">
+                <input name="instock" type="text" value="{{$product_edit[0]->instock}}">
             </div>
             <div class="form-group">
                 <p>Description</p>

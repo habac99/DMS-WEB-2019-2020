@@ -27,7 +27,7 @@
                     <tbody>
                     @foreach($orders as $order)
                         <tr class="adminorder">
-                            <td class="id">{{$order->bill_id}}</td>
+                            <td class="autoIncre"></td>
                             <td class="shipto">{{$order->shipTo}}</td>
                             <td class="email">{{$order->email}}</td>
                             <td class="img-list">

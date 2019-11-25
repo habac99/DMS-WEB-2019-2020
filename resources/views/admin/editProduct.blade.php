@@ -18,23 +18,23 @@
                 <input type="number" name="price" value="{{$product_edit[0]->unit_price}}">
             </div>
 
-            <div class="form-group">
-                <p>Product images</p>
-                <input type="file" id="file-input" name="img[]" multiple>
-                <div id="preview">
-                    <img src="{{asset($product_edit[0]->image1)}}" alt="">
-                    <img src="{{asset($product_edit[0]->image2)}} " alt="">
-                    <img src="{{asset($product_edit[0]->image3)}} " alt="">
-                    <img src="{{asset($product_edit[0]->image4)}}" alt="">
-                    <img src="{{asset($product_edit[0]->image5)}} " alt="">
-                </div>
-            </div>
-            <div class="form-group">
+{{--            <div class="form-group">--}}
+{{--                <p>Product images</p>--}}
+{{--                <input type="file" id="file-input" name="img[]" multiple>--}}
+{{--                <div id="preview">--}}
+{{--                    <img src="{{asset($product_edit[0]->image1)}}" alt="">--}}
+{{--                    <img src="{{asset($product_edit[0]->image2)}} " alt="">--}}
+{{--                    <img src="{{asset($product_edit[0]->image3)}} " alt="">--}}
+{{--                    <img src="{{asset($product_edit[0]->image4)}}" alt="">--}}
+{{--                    <img src="{{asset($product_edit[0]->image5)}} " alt="">--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="form-group">--}}
                 <p>Product color</p>
                 <input type="text" name="color" value="{{$product_edit[0]->color}}">
             </div>
             <div class="form-group">
-                <p>Size</p>
+                <p>In Stock</p>
                 <input name="size" type="text">
             </div>
             <div class="form-group">

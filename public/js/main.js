@@ -34,30 +34,66 @@ window.onclick = function (event) {
             }
         }
     }
+    if (!event.target.matches('.drop-btn-account')) {
+        var dropdowns = document.getElementsByClassName("newest-layer");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show1')) {
+                openDropdown.classList.remove('show1');
+            }
+        }
+    }
 }
+
+/*------------------------------------------------Account----------------------------------------------*/
+document.addEventListener("DOMContentLoaded",function(){
+
+    var button1 = document.getElementById('name-user'),
+        drop1 = document.getElementById('drop-down-account');
+    // console.log(button);
+    button1.onclick = function(){
+        drop1.classList.toggle('show1');
+    }
+},false);
+
+// Close drop-down
+// window.onclick = function (event) {
+//     if (!event.target.matches('.drop-btn-account')) {
+//         var dropdowns = document.getElementsByClassName("name-user-layer2");
+//         var i;
+//         for (i = 0; i < dropdowns.length; i++) {
+//             var openDropdown = dropdowns[i];
+//             if (openDropdown.classList.contains('show1')) {
+//                 openDropdown.classList.remove('show1');
+//             }
+//         }
+//     }
+// }
+/*-----------------------------------------------------------------------------------------------*/
 
 /*-------------------------------------------------cart--------------------------------*/
 
-document.addEventListener("DOMContentLoaded",function(){
-
-    var black = document.querySelector('.black-screen'),
-        cart = document.querySelector('.content-cart'),
-        button = document.querySelector('.cart');
-        overflow = document.querySelector('body');
-        close = document.querySelector('.close');
-
-    button.onclick = function(){
-        black.classList.add('show');
-        cart.classList.add('move-to-left');
-        overflow.classList.add('remove-scroll');
-    }
-
-    close.onclick = function(){
-        black.classList.remove('show');
-        cart.classList.remove('move-to-left');
-        overflow.classList.remove('remove-scroll');
-    }
-},false);
+// document.addEventListener("DOMContentLoaded",function(){
+//
+//     var black = document.querySelector('.black-screen'),
+//         cart = document.querySelector('.content-cart'),
+//         button = document.querySelector('.cart');
+//         overflow = document.querySelector('body');
+//         close = document.querySelector('.close');
+//
+//     button.onclick = function(){
+//         black.classList.add('show');
+//         cart.classList.add('move-to-left');
+//         overflow.classList.add('remove-scroll');
+//     }
+//
+//     close.onclick = function(){
+//         black.classList.remove('show');
+//         cart.classList.remove('move-to-left');
+//         overflow.classList.remove('remove-scroll');
+//     }
+// },false);
 //
 //
 /*-------------------------------------------------show--------------------------------*/
@@ -141,7 +177,23 @@ function myFunction(imgs) {
 
     //console.log(buttonAdd.innerHTML);
 
+/*---------------------------------------------Click Size-----------------------------------------*/
+var button = document.getElementById("buttonAdd");
+var clickBtn = document.getElementById('select-size-haha');
+// var clicklabel= document.getElementById(btn-size) ;
+// Disable the button on initial page load
+button.disabled = true;
 
+//add event listener
+clickBtn.addEventListener('click', function(event) {
+    console.log(event.target.previousElementSibling)
+    event.target.previousElementSibling.checked = 'checked';
+    button.disabled = !button.disabled;
+});
+
+// button.addEventListener('click', function(event) {
+//     alert('Enabled!');
+// });
 
 
 

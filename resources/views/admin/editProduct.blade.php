@@ -17,6 +17,10 @@
                 <p>Price</p>
                 <input type="number" name="price" value="{{$product_edit[0]->unit_price}}">
             </div>
+            <div class="form-group">
+                <p>Product color</p>
+                <input type="text" name="color" value="{{$product_edit[0]->color}}">
+            </div>
 
 {{--            <div class="form-group">--}}
 {{--                <p>Product images</p>--}}
@@ -30,9 +34,7 @@
 {{--                </div>--}}
 {{--            </div>--}}
 {{--            <div class="form-group">--}}
-                <p>Product color</p>
-                <input type="text" name="color" value="{{$product_edit[0]->color}}">
-            </div>
+
             <div class="form-group">
                 <p>In Stock</p>
                 <input name="size" type="text">

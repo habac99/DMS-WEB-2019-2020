@@ -41,34 +41,34 @@
                 <div class="_cost" id = "priceid">${{$details[0]->unit_price}}</div>
                 <div class="_color-link"></div>
                 <form method="get" action="{{route('addCart',[$details[0]->product_id,$details[0]->color])}}">
-                <div class="select-size">
+                <div class="select-size" id="select-size-haha">
                     <div class="custom-input x">
-                        <input type="radio" id="XS" name="size" value="XS">
+                        <input type="radio" id="XS btn-size" name="size" value="XS">
                         <label for="XS" class="two-size">XS</label>
                         <div class="check"></div>
                     </div>
                     <div class="custom-input x">
-                        <input type="radio" id="S" name="size" value="S">
+                        <input type="radio" id="S btn-size" name="size" value="S">
                         <label for="S" class="s-size">S</label>
                         <div class="check"></div>
                     </div>
                     <div class="custom-input x">
-                        <input type="radio" id="M" name="size" value="M">
+                        <input type="radio" id="M btn-size" name="size" value="M">
                         <label for="M" class="m-size">M</label>
                         <div class="check"></div>
                     </div>
                     <div class="custom-input x">
-                        <input type="radio" id="L" name="size" value="L">
+                        <input type="radio" id="L btn-size" name="size" value="L">
                         <label for="L" class="l-size">L</label>
                         <div class="check"></div>
                     </div>
                     <div class="custom-input xl">
-                        <input type="radio" id="XL" name="size" value="XL">
+                        <input type="radio" id="XL btn-size" name="size" value="XL">
                         <label for="XL" class="two-size">XL</label>
                         <div class="check"></div>
                     </div>
                     <div class="custom-input xxl">
-                        <input type="radio" id="XXL" name="size" value="XXL">
+                        <input type="radio" id="XXL btn-size" name="size" value="XXL">
                         <label for="XXL" class="three-size">XXL</label>
                         <div class="check"></div>
                     </div>

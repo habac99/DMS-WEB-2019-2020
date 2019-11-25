@@ -163,6 +163,9 @@ table.scroll thead th.des-width{
     padding-left: 20px;
     /* border-right: 1px solid black; */
 }
+table.scroll tbody td.des-width .color-product-checkout{
+    text-transform: uppercase;
+}
 table.scroll tbody td.count-width,
 table.scroll thead th.count-width{
     /*padding-left: 50px;*/
@@ -366,7 +369,7 @@ tbody td:last-child, thead th:last-child {
 }
 .empty-checkout{
     margin-top: 190px;
-    width: 90%;
+    width: 100%;
     font-size: 20px;
     text-align: center;
     margin-bottom: 190px;

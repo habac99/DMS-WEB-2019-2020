@@ -118,7 +118,7 @@
                             <td class="img-width"><img src="{{asset($item->options->img)}}" alt=""></td>
                             <td class="des-width">
                                 <div>{{$item->name}}</div>
-                                <div>{{$item->options->color}}</div>
+                                <div class="color-product-checkout">{{$item->options->color}}</div>
                                 <div>{{$item->options->size}}</div>
 
                             </td>

@@ -3,7 +3,7 @@
     <div class="main-menu">
         <div class="left-menu">
             <div class="menu-layer1">
-                <button id="tle" class="dropbtn">Shop</button>
+                <p id="tle" class="dropbtn">Shop</p>
                 <div class="menu-layer2" id="drop-down">
                     <ul>
                         <li>
@@ -32,15 +32,18 @@
 
 
         <div class="right-menu">
-            <form method="get" action="{{route('search')}}">
-            <input type="text" required name="keyword" class="form-control" placeholder="Search product" />
-            </form>
+{{--            <form method="get" action="{{route('search')}}">--}}
+{{--            <input type="text" required name="keyword" class="form-control" placeholder="Search product" />--}}
+{{--            </form>--}}
+
             @if(Auth::check() )
-                <a id="name-user" href="">{{Auth::User()->first_name}}</a>
-                <div class="newest-layer">
+            <div class="name-user-layer" id="name-user-layer2">
+                <p id="name-user" class="drop-btn-account">{{Auth::User()->first_name}}</p>
+                <div class="newest-layer" id="drop-down-account">
 {{--                    <a href="">{{Auth::User()->first_name}}</a>--}}
                     <a href={{route('logout')}}>Log Out</a>
                 </div>
+            </div>
             <div class="container-cart">
                 <a href="{{route('checkOut')}}" class="fas fa-shopping-cart cart" ></a>
                 <span class="count-cart">{{Cart::instance(Auth::User()->customer_id)->content()->groupBy('rowId')->count()}} </span>

@@ -35,8 +35,8 @@
                                     @foreach($details as $detail)
                                         @if($detail->bill_id == $order->bill_id)
                                     <tr id="tr-small">
-                                        <td>{{$detail->product_name}}</td>
-                                        <td>{{$detail->more_info}}</td>
+                                        <td id="name-product-order">{{$detail->product_name}}</td>
+                                        <td id="moreinfo-product-order">{{$detail->more_info}}</td>
                                         <td id="soluong">{{$detail->quantity}}</td>
                                     </tr>
                                         @endif

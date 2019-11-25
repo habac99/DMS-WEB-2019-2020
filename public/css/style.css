@@ -50,6 +50,9 @@ div{
     display: flex;
     text-transform: uppercase;
 }
+.header-menu .left-menu{
+    width: 110.5px;
+}
 .header-menu .left-menu .menu-layer1{
     position: relative;
 }
@@ -951,30 +954,44 @@ div{
 .user-menu a:hover, .user-menu a:focus {
     text-decoration: none;
 }
-.right-menu > a{
+.right-menu .name-user-layer{
+    /*border: 1px solid red;*/
+}
+.right-menu .name-user-layer > #name-user{
     text-decoration: none;
+    border: none;
+    background-color: white;
+    font-size: 17px;
+    cursor: pointer;
     color: black;
 }
-.newest-layer {
+.right-menu .name-user-layer .newest-layer {
     position: relative;
 }
-.newest-layer{
+.right-menu .name-user-layer .newest-layer{
     position: absolute;
-    right: 109px;
+    right: 108px;
     top: 60px;
     width: 100px;
     background-color: white;
-    z-index: 2;
+    /*z-index: 2;*/
     padding-top: 15px;
     padding-right: 5px;
     padding-left: 5px;
     border-right: 1px solid #8c8c8c;
     border-bottom: 1px solid #8c8c8c;
     border-left: 1px solid #8c8c8c;
-    /*visibility: hidden;*/
-    /*opacity: 0;*/
+    visibility: hidden;
+    opacity: 0;
 }
-.right-menu #name-user:hover .newest-layer{
-    opacity: 1;
+.right-menu .name-user-layer .newest-layer.show1{
     visibility: visible;
+    opacity: 1;
+    /*border-right: 1px solid #8c8c8c;*/
+    /*border-bottom: 1px solid #8c8c8c;*/
+    /*border-left: 1px solid #8c8c8c;*/
 }
+/*.right-menu .name-user-layer:hover .newest-layer{*/
+/*    opacity: 1;*/
+/*    visibility: visible;*/
+/*}*/

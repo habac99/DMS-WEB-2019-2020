@@ -211,6 +211,15 @@
     color: white;
     background-color: black;
 }
+.show-container .show-section .img-infor .select-color .custom-input-color input[type=radio]:checked ~ label > a{
+    color: white;
+    /*background-color: black;*/
+}
+.show-container .show-section .img-infor .select-color .custom-input-color label > a{
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+}
 /*.show-container .show-section .img-infor .select-color .custom-color input[type=radio]:checked ~ label{*/
 /*    color: white;*/
 /*    background-color: black;*/

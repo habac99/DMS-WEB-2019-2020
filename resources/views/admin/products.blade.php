@@ -5,9 +5,9 @@
 @endsection
 @section('content')
     <div class="content-menu">
-        <div class="name-content">Sản phẩm</div>
+        <div class="name-content">Product</div>
         <div class="panel-heading">
-            <div class="name-panel">Product list</div>
+            <div class="name-panel">Product List</div>
             <div class="panel-body">
                 <a href={{route('addProduct')}} class="add-btn">Add Product</a>
                 <div class="margin-div"></div>

@@ -51,7 +51,7 @@
                         <p class="alert alert-success">{{Session::get('success')}}</p>
                 @endif
                 <div class="form-group" id="last">
-                    <input type="submit" value="Add">
+                    <input type="submit" value="Add" class="btn-submit-add">
                     <a href={{route('adminProduct')}}>Cancel</a>
                 </div>
 

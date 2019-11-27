@@ -42,7 +42,7 @@
                 <div class="white"></div>
                 <div class="size-section">
                     <div class="size">AVAILABLE SIZE</div>
-                    <div class="size-number">28 29 30 31 32 33 34 35 36 37 38 39 40</div>
+                    <div class="size-number">XS S M L XL XXL</div>
                 </div>
                 <div class="btn-shop-now">
                     <a href={{route('one_product',[$best_pr->product_name,$best_pr->color])}}>SHOP NOW</a>

@@ -22,6 +22,10 @@
                     </ul>
                 </div>
             </div>
+            <form method="get" action="{{route('search')}}">
+                <input id="input-search" type="text" required name="keyword" class="form-control" placeholder="Search product" />
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </form>
             <!-- <a href="#">About</a> -->
         </div>
         <div class="logo-middle">
@@ -32,9 +36,7 @@
 
 
         <div class="right-menu">
-{{--            <form method="get" action="{{route('search')}}">--}}
-{{--            <input type="text" required name="keyword" class="form-control" placeholder="Search product" />--}}
-{{--            </form>--}}
+
 
             @if(Auth::check() )
             <div class="name-user-layer" id="name-user-layer2">

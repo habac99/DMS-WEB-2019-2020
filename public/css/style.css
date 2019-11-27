@@ -49,9 +49,10 @@ div{
 .left-menu,.right-menu{
     display: flex;
     text-transform: uppercase;
+    width: 300px;
 }
 .header-menu .left-menu{
-    width: 110.5px;
+    /*width: 300px;*/
 }
 .header-menu .left-menu .menu-layer1{
     position: relative;
@@ -147,6 +148,7 @@ div{
 .right-menu{
     /*border: 1px solid green;*/
     align-items: center;
+    justify-content: flex-end;
 }
 .right-menu .container-cart{
     position: relative;
@@ -995,3 +997,25 @@ div{
 /*    opacity: 1;*/
 /*    visibility: visible;*/
 /*}*/
+.left-menu > form{
+    display: flex;
+    border: 1px solid rgb(179, 179, 179);
+    margin-left: 20px;
+}
+.left-menu > form #input-search{
+    border: none;
+    outline: none;
+    padding: 2px 5px;
+    font-size: 17px;
+    width: 200px;
+}
+.left-menu > form .search-btn{
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: none;
+    background: none;
+    margin-right: 5px;
+    font-size: 16px;
+    color: rgb(56, 56, 56);
+}

@@ -30,7 +30,7 @@
     <div class="container">
         <div class="left-menu" id="left-menu-admin">
             <ul>
-                <li class="active" id="indexadmin">
+                <li id="indexadmin">
                     <a href={{route('adminHome')}}>
                         <i class="fas fa-home"></i>
                         <p>Home</p>

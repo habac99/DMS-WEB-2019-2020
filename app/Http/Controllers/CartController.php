@@ -101,7 +101,7 @@ class CartController extends Controller
             $sold = $pr_detail[0]->sold;
             $instock = $pr_detail[0]->instock;
             DB::table('product_details')->where('color',strtolower($item->options->color))->where('product_id',$item->id)
-                            ->update(['sold'=>$sold +1,'instock'=>$instock-1]);
+                            ->update(['sold'=>$sold +$item->qty,'instock'=>$instock-$item->qty]);
 
 
         }

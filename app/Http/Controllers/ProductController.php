@@ -28,7 +28,7 @@ class ProductController extends Controller
         $check_name= product::where('product_name',strtoupper($req->pr_name))->get();
         $count = count($check_name);
         if($count){
-                $query = product_detail::where('product_id',$check_name[0]->product_id)->where('color',$req->color)->get();
+                $query = product_detail::where('product_id',$check_name[0]->product_id)->where('color',strtolower($req->color) )->get();
                 $count_color = count($query);
                 if($count_color){
                     return back()->withInput()->with('error', 'Product exist');
@@ -37,7 +37,7 @@ class ProductController extends Controller
                         $photos = $req->file('img');
                         $product_detail = new product_detail;
                         $product_detail->product_id = $check_name[0]->product_id;
-                        $product_detail->color = $req->color;
+                        $product_detail->color = strtolower($req->color);
                         $img = 'image';
                         for($i = 1; $i<=sizeof($photos);$i++){
                             $imgin = $img.$i;
@@ -124,17 +124,18 @@ class ProductController extends Controller
 
     public function deleteProduct(Request $req){
 
-        $count   = DB::table('product_details')->where('product_id', $req->id)->get();
+        $count   = DB::table('product_details')->where('product_id','=', $req->id)->get();
         if(count($count)==1){
-            DB::table('product_details')->where('product_id',$req->id)->where('product_color',$req->color)->delete();
+            DB::table('product_details')->where('product_id',$req->id)->where('color',$req->color)->delete();
             product::destroy($req->id);
 
 
-
         }else{
-            DB::table('product_details')->where('product_id',$req->id)->where('product_color',$req->color)->delete();
+            DB::table('product_details')->where('product_id',$req->id)->where('color',$req->color)->delete();
         }
         return redirect('/Admin/product');
+        //dd($req->id,$req->color,count($count));
+//
     }
 
 }

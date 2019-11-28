@@ -1,0 +1,34 @@
+[
+    {
+        "id": "1",
+        "product_id": "1",
+        "color": "black",
+        "instock": "199",
+        "sold": "100",
+        "image1": "storage/img/denim/m1-denim-black-1.jpg",
+        "image2": "storage/img/denim/m1-denim-black-2.jpg",
+        "image3": "storage/img/denim/m1-denim-black-3.jpg",
+        "image4": "storage/img/denim/m1-denim-black-4.jpg",
+        "image5": "storage/img/denim/m1-denim-black-5.jpg",
+        "created_at": null,
+        "updated_at": "2019-11-25 13:04:40",
+        "unit_price": "50.0",
+        "description": "a124"
+    },
+    {
+        "id": "4",
+        "product_id": "1",
+        "color": "blue",
+        "instock": "200",
+        "sold": "56",
+        "image1": "storage/img/denim/m1-denim-blue-1.jpg",
+        "image2": "storage/img/denim/m1-denim-blue-2.jpg",
+        "image3": "storage/img/denim/m1-denim-blue-3.jpg",
+        "image4": "storage/img/denim/m1-denim-blue-4.jpg",
+        "image5": "storage/img/denim/m1-denim-blue-5.jpg",
+        "created_at": null,
+        "updated_at": null,
+        "unit_price": "50.0",
+        "description": "a124"
+    }
+]

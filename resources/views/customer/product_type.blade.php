@@ -5,7 +5,7 @@
 @section('title')
     {{strtoupper($type_name)}}
 @endsection
-{{--<link rel="stylesheet" href="/css/bootstrap.min.css">--}}
+<link rel="stylesheet" href="/css/bootstrap.min.css">
 @section('content')
     <div class="product-header">
         <div class="header-text">

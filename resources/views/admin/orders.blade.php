@@ -35,7 +35,7 @@
                                     @foreach($details as $detail)
                                         @if($detail->bill_id == $order->bill_id)
                                     <tr id="tr-small">
-                                        <td id="name-product-order">{{$detail->product_name}}</td>
+                                        <td id="name-product-order">{{strtolower($detail->product_name)}}</td>
                                         <td id="moreinfo-product-order">{{$detail->more_info}}</td>
                                         <td id="soluong">{{$detail->quantity}}</td>
                                     </tr>

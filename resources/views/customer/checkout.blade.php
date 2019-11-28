@@ -150,7 +150,13 @@
         </div>
 
 
+        @elseif (Session::has('Success'))
+            <div class="empty-checkout">
+                {{Session::get('Success')}}
+            </div>
         @else
+
+
             <div class="empty-checkout">
                 Looks like your bag is empty.<br>
                 Let's add a thing or two.

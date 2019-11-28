@@ -15,7 +15,7 @@
             <div class="text">Email Address</div>
             <input required type="email" name="email" value="{{old('email')}}" class="email">
             <div class="text">Password</div>
-            <input type="password" name="password" class="_password">
+            <input required type="password" name="password" class="_password">
             <a href="#" class="forgot-password">I forgot my password</a>
            <a href={{route('Homepage')}}>
                <button class="btn-submit" type="submit" name="subcribe">SIGN IN</button>

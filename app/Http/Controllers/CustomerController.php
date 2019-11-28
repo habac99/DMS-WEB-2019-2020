@@ -87,14 +87,17 @@ class CustomerController extends Controller
 
         if ($req->color) {
             $data['details'] = DB::table('product_details')->join('products','product_details.product_id','=','products.product_id')
-                                                         ->select('product_details.*','products.unit_price')
+                                                         ->select('product_details.*','products.unit_price','products.description')
                                                          ->where('product_details.product_id', $id)->where('product_details.color', $color)->get();
         }else{
             $data['details'] = DB::table('product_details')->join('products','product_details.product_id','=','products.product_id')
-                                                         ->select('product_details.*','products.unit_price')
-                                                         ->where('product_details.product_id',$id)->limit(1)->get();
+                                                         ->select('product_details.*','products.unit_price','products.description')
+                                                         ->where('product_details.product_id',$id)->get();
 
         }
+        $json_data = json_encode($data['details'] , JSON_PRETTY_PRINT);
+//
+    file_put_contents(base_path('storage/app/public/details.json'), stripslashes($json_data));
         $data['product_type'] = $this->product_type;
         return response()
             -> view('customer.one_product', $data);
@@ -119,7 +122,7 @@ class CustomerController extends Controller
     }
     public function postLogin(Request $req){
         $remember= true;
-        if(Auth::attempt(['email'=>$req->email, 'password'=>$req->password],$remember)) {
+        if(Auth::attempt(['email'=>strtolower($req->email) , 'password'=>$req->password],$remember)) {
             if (Auth::User()->level == 1) {
                 return redirect()->intended('/Admin');
 
@@ -178,7 +181,7 @@ class CustomerController extends Controller
               $user = new User();
               $user->first_name = $req->firstname;
               $user->last_name = $req->lastname;
-              $user->email = $req->email;
+              $user->email = strtolower($req->email);
               $user->password = bcrypt($req->password);
               $user->phone_number = $req->phone;
               $user->save();

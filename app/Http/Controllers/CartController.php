@@ -101,7 +101,7 @@ class CartController extends Controller
         }
             Cart::instance($instance)->destroy();
 
-        return back();
+        return back()->withInput()->with('Success','Order successfully');
     }
     public function deleteCart(Request $req){
         if(Auth::check()){

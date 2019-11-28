@@ -4,7 +4,9 @@
     {{$name}}
 @endsection
 @section('content')
+<script>
 
+</script>
 
     <div class="show-container">
         @if(count($details)>0)
@@ -76,9 +78,10 @@
                     <div class="select-color">
                         @foreach($colors as $color)
                         <div class="custom-input-color blue">
+
                             <input type="radio" id="color"  name="color" value="{{$color ->color}}"
-                            @if ($details[0] ->color == $color->color) checked @endif>
-                         <label for="color" class="two-size"><a href="{{route('one_product',[$name,$color ->color])}}">{{$color ->color}}</a></label>
+                                   @if ($details[0] ->color == $color->color) checked @endif>
+                            <label for="color" class="two-size"><a href="{{route('one_product',[$name,$color ->color])}}">{{$color ->color}}</a></label>
                             <div class="check"></div>
                         </div>
                         @endforeach
@@ -86,12 +89,14 @@
                     </div>
 
 {{--                <a href="{{route('addCart',[$details[0]->product_id,$details[0]->color])}}"><button id="buttonAdd"  type="button" >ADD TO BAG</button></a>--}}
+{{--                    <button id="blue"  type="button" >blue</button></a>--}}
                     <button id="buttonAdd"  type="submit" >ADD TO BAG</button></a>
                     {{csrf_field()}}
                 </form>
                 <div class="information">
                     <p class="des">
-                        the Cargo Drawcord Shorts are designed with a relaxed fit throughout, cargo pockets at the side seam and front, which extend past the length of the shorts, a stretch waistband, and is finished with a yellow elastic drawcord with metal aglets.
+{{--                        the Cargo Drawcord Shorts are designed with a relaxed fit throughout, cargo pockets at the side seam and front, which extend past the length of the shorts, a stretch waistband, and is finished with a yellow elastic drawcord with metal aglets.--}}
+                        {{$details[0]->description}}
                     </p>
                     <div class="detail">
                         <p>detail</p>

@@ -1,0 +1,18 @@
+[
+    {
+        "id": "15",
+        "product_id": "4",
+        "color": "blue",
+        "instock": "100",
+        "sold": "0",
+        "image1": "storage/img/denim/x1-denim-blue-5.jpg",
+        "image2": "storage/img/denim/x1-denim-blue-4.jpg",
+        "image3": "storage/img/denim/x1-denim-blue-3.jpg",
+        "image4": "storage/img/denim/x1-denim-blue-2.jpg",
+        "image5": "storage/img/denim/x1-denim-blue-1.jpg",
+        "created_at": "2019-11-19 16:31:23",
+        "updated_at": "2019-11-19 16:31:23",
+        "unit_price": "89.0",
+        "description": "this is description"
+    }
+]

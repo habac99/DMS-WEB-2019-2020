@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/css/admin.css">
     <link rel="stylesheet" href="/css/productadmin.css">
     <link rel="stylesheet" href="/css/addproductadmin.css">
+{{--    <link rel="stylesheet" href="/css/bootstrap.min.css">--}}
 
     <title>
         @section('title')

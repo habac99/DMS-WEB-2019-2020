@@ -354,10 +354,10 @@ div{
 
 }
 .new-product .img-new-product{
-    width: 390px;
+    width: 320px;
 }
 .new-product .img-new-product img{
-    width: 390px;
+    width: 320px;
     margin-bottom: 7px;
     transition: 0.4s;
 }

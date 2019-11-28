@@ -113,7 +113,8 @@ class ProductController extends Controller
 
 
             ]);
-            $product_details::where('product_id', $req->id)->where('color', $req->color)->update(['instock'=>$req->instock]);
+            $product_details::where('product_id', $req->id)->where('color', $req->color)
+                            ->update(['instock'=>$req->instock]);
         return back();
         }
 

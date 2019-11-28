@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\bill;
 use App\bill_detail;
+use App\product_detail;
 use Illuminate\Http\Request;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use App\product;
@@ -96,9 +97,16 @@ class CartController extends Controller
             $bill_details->quantity = $item->qty;
             $bill_details->unit_price = $item->price;
             $bill_details->save();
+            $pr_detail = DB::table('product_details')->where('color',strtolower($item->options->color) )->where('product_id',$item->id)->get();
+            $sold = $pr_detail[0]->sold;
+            $instock = $pr_detail[0]->instock;
+            DB::table('product_details')->where('color',strtolower($item->options->color))->where('product_id',$item->id)
+                            ->update(['sold'=>$sold +1,'instock'=>$instock-1]);
 
 
         }
+
+
             Cart::instance($instance)->destroy();
 
         return back()->withInput()->with('Success','Order successfully');
@@ -120,6 +128,8 @@ class CartController extends Controller
         else{
             Cart::instance('guest')->update($req->rowId, $req->qty);
         }
+
+
 
     }
 }

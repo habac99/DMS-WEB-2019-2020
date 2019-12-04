@@ -1,18 +1,18 @@
 [
     {
-        "id": "26",
-        "product_id": "1",
-        "color": "black",
-        "instock": "100",
-        "sold": "0",
-        "image1": "storage/img/denim/m1-denim-black-1.jpg",
-        "image2": "storage/img/denim/m1-denim-black-2.jpg",
-        "image3": "storage/img/denim/m1-denim-black-3.jpg",
-        "image4": "storage/img/denim/m1-denim-black-4.jpg",
-        "image5": "storage/img/denim/m1-denim-black-5.jpg",
-        "created_at": "2019-11-28 15:06:58",
-        "updated_at": "2019-11-28 15:06:58",
+        "id": "14",
+        "product_id": "3",
+        "color": "blue",
+        "instock": "95",
+        "sold": "55",
+        "image1": "storage/img/denim/m1-repaired-denim-blue-5.jpg",
+        "image2": "storage/img/denim/m1-repaired-denim-blue-4.jpg",
+        "image3": "storage/img/denim/m1-repaired-denim-blue-3.jpg",
+        "image4": "storage/img/denim/m1-repaired-denim-blue-2.jpg",
+        "image5": "storage/img/denim/m1-repaired-denim-blue-1.jpg",
+        "created_at": "1574180919000",
+        "updated_at": "2019-11-19 16:28:39",
         "unit_price": "50.0",
-        "description": "a124"
+        "description": "this is description"
     }
 ]

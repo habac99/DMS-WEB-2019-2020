@@ -5,7 +5,7 @@
 @section('title')
     {{strtoupper($type_name)}}
 @endsection
-<link rel="stylesheet" href="/css/bootstrap.min.css">
+{{--<link rel="stylesheet" href="/css/bootstrap.min.css">--}}
 @section('content')
     <div class="product-header">
         <div class="header-text">
@@ -23,19 +23,17 @@
                     <div class="white"></div>
                     <div class="size-section">
                         <div class="size">AVAILABLE SIZE</div>
-                        <div class="size-number">28 29 30 31 32 33 34 35
-                            <br>
-                            36 37 38 39 40</div>
+                        <div class="size-number">XS S M L XL XXL</div>
                     </div>
                     <div class="btn-shop-now">
                         <a href="{{route('one_product',[$pr_list->product_name,$pr_list->color])}}">SHOP NOW</a>
                     </div>
 
                 </div>
-                <div class="title-img">
+                <div class="title-img" style="text-transform: uppercase">
                     <a href="#">{{$pr_list->product_name}}</a>
                     <div class="cost">
-                        <p>{{$pr_list->unit_price}}</p>
+                        <p>${{$pr_list->unit_price}}</p>
                     </div>
                 </div>
                 <div class="information">{{ucfirst($pr_list->color)}}</div>

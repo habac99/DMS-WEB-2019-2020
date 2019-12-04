@@ -108,7 +108,7 @@ class CustomerController extends Controller
     }
     public function all_product(){
         //$all_products = DB::table('products')->get();
-        $all_products = product::all();
+        $all_products =DB::table('products')->get();
         $product_type = $this->product_type;
         return response()
             ->view('customer.all_product', compact('all_products', 'product_type'));
@@ -184,6 +184,7 @@ class CustomerController extends Controller
               $user->email = strtolower($req->email);
               $user->password = bcrypt($req->password);
               $user->phone_number = $req->phone;
+              $user->address = $req->address;
               $user->save();
               Auth::login($user, true);
               return redirect()->intended('/');

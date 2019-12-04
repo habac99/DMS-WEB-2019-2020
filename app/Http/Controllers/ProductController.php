@@ -73,7 +73,7 @@ class ProductController extends Controller
                 $latest = DB::table('products')->latest()->get();
                 $product_detail = new product_detail;
                 $product_detail->product_id = $latest[0]->product_id;
-                $product_detail->color = $req->color;
+                $product_detail->color = strtolower($req->color) ;
                 $img = 'image';
                 for($i = 1; $i<=sizeof($photos);$i++){
                     $imgin = $img.$i;
@@ -112,10 +112,11 @@ class ProductController extends Controller
                                                             'unit_price' => $req->price
 
 
+
             ]);
             $product_details::where('product_id', $req->id)->where('color', $req->color)
                             ->update(['instock'=>$req->instock]);
-        return back();
+        return redirect('/Admin/product');
         }
 
 

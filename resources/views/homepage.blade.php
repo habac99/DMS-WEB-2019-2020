@@ -38,7 +38,7 @@
         @foreach($best_seller as $best_pr)
         <div class="img-bestseller-product">
             <div class="image-block">
-                <a href={{route('one_product',[$best_pr->product_name,$best_pr->color])}}><img src={{asset($best_pr->image1)}} alt="" class="layer1"></a>
+                <a href={{route('one_product',[$best_pr->product_name,$best_pr->color])}}><img src="{{asset($best_pr->image1)}}" alt="" class="layer1"></a>
                 <div class="white"></div>
                 <div class="size-section">
                     <div class="size">AVAILABLE SIZE</div>

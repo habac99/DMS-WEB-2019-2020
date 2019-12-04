@@ -87,10 +87,10 @@
                         <div class="text">Address</div>
                         <input required name="address" type="text" class="address">
                     </div>
-                    <div class="city-container">
-                        <div class="text">City</div>
-                        <input required  type="text" class="address">
-                    </div>
+{{--                    <div class="city-container">--}}
+{{--                        <div class="text">City</div>--}}
+{{--                        <input required  type="text" class="address">--}}
+{{--                    </div>--}}
                     <div class="phone-container">
                         <div class="text">Phone</div>
                         <input required name="phone" type="text">

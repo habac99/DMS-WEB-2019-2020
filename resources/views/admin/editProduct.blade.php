@@ -37,7 +37,7 @@
 
             <div class="form-group">
                 <p>In Stock</p>
-                <input name="size" type="text">
+                <input name="instock" type="number" value="{{$product_edit[0]->instock}}">
             </div>
             <div class="form-group">
                 <p>Description</p>

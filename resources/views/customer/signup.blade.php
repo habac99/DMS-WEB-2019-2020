@@ -25,7 +25,7 @@
         <div class="text">Password</div>
         <input required type="password" name="password" class="email">
         <div class="text">Address</div>
-        <input required type="email" name="email" class="email">
+        <input required type="text" name="address" class="email">
         <button class="btn-submit" type="submit" name="subcribe">SIGN UP</button>
         <div class="account-alr">
             <span>Already have an account?</span>

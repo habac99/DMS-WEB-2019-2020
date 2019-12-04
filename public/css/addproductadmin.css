@@ -105,5 +105,12 @@
     color: white;
     background-color: #30a5ff;
     margin-right: 5px;
+    cursor: pointer;
+}
+.custom-alert{
+    margin-left: 20px;
+    color: red;
+    font-size: 15px;
+    margin-bottom: 20px;
 }
 

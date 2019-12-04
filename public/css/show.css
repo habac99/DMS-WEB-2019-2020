@@ -207,12 +207,17 @@
     align-items: center;
     justify-content: center;
 }
+/*.show-container .show-section .img-infor .select-color .custom-input-color label > a{*/
+/*    text-transform: capitalize;*/
+/*}*/
 .show-container .show-section .img-infor .select-color .custom-input-color input[type=radio]:checked ~ label{
     color: white;
     background-color: black;
+
 }
 .show-container .show-section .img-infor .select-color .custom-input-color input[type=radio]:checked ~ label > a{
     color: white;
+    /*text-transform: capitalize;*/
     /*background-color: black;*/
 }
 .show-container .show-section .img-infor .select-color .custom-input-color label > a{

@@ -31,7 +31,7 @@
 
 .product .img-bestseller-product{
     width: 280px;
-    margin: 0 20px 0 20px;
+    margin: 0 20px 30px 20px;
     /* border: 1px solid red; */
 }
 .product .img-bestseller-product img{
@@ -58,7 +58,7 @@
     text-decoration: none;
     color: #231f20;
     font-size: 17px;
-    font-weight: 800;
+    font-weight: 600;
 }
 .product .img-bestseller-product .title-img p{
     height: 100%;

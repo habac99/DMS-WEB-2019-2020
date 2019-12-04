@@ -9,6 +9,11 @@
         <div class="name-content">Sản phẩm</div>
         <div class="panel-heading">
             <div class="name-panel">Thêm sản phẩm</div>
+            @if(Session::has('error'))
+                <p class="alert alert-danger custom-alert">{{Session::get('error')}}</p>
+            @elseif(Session::has('success'))
+                <p class="alert alert-success custom-alert">{{Session::get('success')}}</p>
+            @endif
             <form method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <p>Product name</p>
@@ -37,19 +42,19 @@
                     <p>Product color</p>
                     <input type="text" name="color">
                 </div>
-                <div class="form-group">
-                    <p>Size</p>
-                    <input type="text">
-                </div>
+{{--                <div class="form-group">--}}
+{{--                    <p>Size</p>--}}
+{{--                    <input type="text">--}}
+{{--                </div>--}}
                 <div class="form-group">
                     <p>Description</p>
                     <textarea name="description" id="" cols="30" rows="10"></textarea>
                 </div>
-                @if(Session::has('error'))
-                    <p class="alert alert-danger">{{Session::get('error')}}</p>
-                    @elseif(Session::has('success'))
-                        <p class="alert alert-success">{{Session::get('success')}}</p>
-                @endif
+{{--                @if(Session::has('error'))--}}
+{{--                    <p class="alert alert-danger">{{Session::get('error')}}</p>--}}
+{{--                    @elseif(Session::has('success'))--}}
+{{--                        <p class="alert alert-success">{{Session::get('success')}}</p>--}}
+{{--                @endif--}}
                 <div class="form-group" id="last">
                     <input type="submit" value="Add" class="btn-submit-add">
                     <a href={{route('adminProduct')}}>Cancel</a>

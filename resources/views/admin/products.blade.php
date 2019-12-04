@@ -34,7 +34,7 @@
                             <img src="{{asset($each_pr->image2)}}" alt="">
                             <img src="{{asset($each_pr->image3)}}" alt="">
                             <img src="{{asset($each_pr->image4)}}" alt="">
-{{--                            <img src={{asset($each_pr->image5)}} alt="">--}}
+                            <img src="{{asset($each_pr->image5)}}" alt="">
 {{--                            <img src="/img/allproduct/denim/m1-denim-black-5.jpg" alt="">--}}
                         </td>
                         <td>{{$each_pr->color}}</td>

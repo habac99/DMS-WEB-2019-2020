@@ -5,8 +5,7 @@ namespace App\Http\Controllers;
 use App\product;
 use Illuminate\Http\Request;
 
-class SearchController extends Controller
-{
+class SearchController extends Controller{
     public function search(Request $request){
         $data['keyword']= $request->keyword;
         $data['keyword'] = strtoupper($data['keyword']);
@@ -18,6 +17,7 @@ class SearchController extends Controller
 
        // dd($all_products );
       return view('customer.search',$data);
+
 
 
 

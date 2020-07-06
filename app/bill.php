@@ -12,6 +12,11 @@ class bill extends Model
     //
     protected $table ='bills';
     protected $primaryKey = 'bill_id';
+    /**
+     * @var mixed|string
+     */
+    private $order_date;
+
     public function bill_detail(){
         return $this->hasMany('App\bill_details','bill_id','bill_id');
     }

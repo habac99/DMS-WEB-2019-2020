@@ -1,18 +1,18 @@
 [
     {
-        "id": "14",
-        "product_id": "3",
-        "color": "blue",
+        "id": "36",
+        "product_id": "27",
+        "color": "green",
         "instock": "95",
-        "sold": "55",
-        "image1": "storage/img/denim/m1-repaired-denim-blue-5.jpg",
-        "image2": "storage/img/denim/m1-repaired-denim-blue-4.jpg",
-        "image3": "storage/img/denim/m1-repaired-denim-blue-3.jpg",
-        "image4": "storage/img/denim/m1-repaired-denim-blue-2.jpg",
-        "image5": "storage/img/denim/m1-repaired-denim-blue-1.jpg",
-        "created_at": "1574180919000",
-        "updated_at": "2019-11-19 16:28:39",
-        "unit_price": "50.0",
-        "description": "this is description"
+        "sold": "5",
+        "image1": "storage/img/top/flannel-shepra-jacket-1.jpg",
+        "image2": "storage/img/top/flannel-shepra-jacket-2.jpg",
+        "image3": "storage/img/top/flannel-shepra-jacket-3.jpg",
+        "image4": "storage/img/top/flannel-shepra-jacket-4.jpg",
+        "image5": "storage/img/top/flannel-shepra-jacket-5.jpg",
+        "created_at": "2019-12-04 19:02:33",
+        "updated_at": "2019-12-04 19:02:33",
+        "unit_price": "55.0",
+        "description": "This is descriptions."
     }
 ]
